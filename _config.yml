@@ -1,14 +1,22 @@
+# =====================================================
+#  Site Configuration for Soumyaroop Nandi’s Website
+# =====================================================
+
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
 url: "https://soumyaroopnandi.github.io"
-baseurl: ""  # keep empty for user site
+baseurl: ""   # Keep empty for user site
 timezone: "America/Los_Angeles"
 
-# Theme
+# -----------------------------------------------------
+# Theme and Appearance
+# -----------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default" # "dark", "air", "contrast", etc.
+minimal_mistakes_skin: "default"   # Options: default, dark, air, contrast, neon, etc.
 
-# Author
+# -----------------------------------------------------
+# Author Information
+# -----------------------------------------------------
 author:
   name: "Soumyaroop Nandi"
   avatar: "/images/ISI.jpg"
@@ -34,38 +42,50 @@ author:
       icon: "far fa-file-pdf"
       url: "/assets/cv/Soumyaroop_Nandi_CV.pdf"
 
-# Build
+# -----------------------------------------------------
+# Build Settings
+# -----------------------------------------------------
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
+
+# -----------------------------------------------------
+# Plugins
+# -----------------------------------------------------
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-scholar
+  # - jekyll-scholar   # Enable only after adding _bib/publications.bib
 
-# Navigation (top menu)
-# Lives in _data/navigation.yml (create it)
+# -----------------------------------------------------
+# Includes and Collections
+# -----------------------------------------------------
 include: ["_pages", "_bib"]
 
-# Collections for projects if you want per-project pages
 collections:
   projects:
     output: true
     permalink: /projects/:name/
 
-# jekyll-scholar config
-scholar:
-  style: apa
-  locale: en
-  source: _bib
-  bibliography: publications.bib
-  bibliography_template: bib_template
-  query: "@*"   # show all by default
-  sort_by: year, month
-  order: descending
+# -----------------------------------------------------
+# Scholar Configuration (optional)
+# -----------------------------------------------------
+# Uncomment this block if you add jekyll-scholar and publications.bib
+# scholar:
+#   style: apa
+#   locale: en
+#   source: _bib
+#   bibliography: publications.bib
+#   bibliography_template: bib_template
+#   query: "@*"   # show all by default
+#   sort_by: year, month
+#   order: descending
 
-# Defaults
+# -----------------------------------------------------
+# Page Defaults
+# -----------------------------------------------------
 defaults:
   - scope:
       path: ""
@@ -83,5 +103,23 @@ defaults:
       sidebar:
         nav: "main"
 
+# -----------------------------------------------------
+# Navigation Data File (stored in _data/navigation.yml)
+# -----------------------------------------------------
+# Example _data/navigation.yml:
+# main:
+#   - title: "About"
+#     url: /about/
+#   - title: "Research"
+#     url: /research/
+#   - title: "Publications"
+#     url: /publications/
+#   - title: "Teaching"
+#     url: /teaching/
+#   - title: "Contact"
+#     url: /contact/
+
+# -----------------------------------------------------
 # Analytics (optional)
-# google_analytics: G-XXXXXXX
+# -----------------------------------------------------
+# google_analytics: G-XXXXXXXXXX
