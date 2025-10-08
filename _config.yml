@@ -1,22 +1,14 @@
-# =====================================================
-#  Site Configuration for Soumyaroop Nandi’s Website
-# =====================================================
-
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
 url: "https://soumyaroopnandi.github.io"
-baseurl: ""   # Keep empty for user site
+baseurl: ""
 timezone: "America/Los_Angeles"
 
-# -----------------------------------------------------
-# Theme and Appearance
-# -----------------------------------------------------
+# Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"   # Options: default, dark, air, contrast, neon, etc.
+minimal_mistakes_skin: "default"
 
-# -----------------------------------------------------
-# Author Information
-# -----------------------------------------------------
+# Author
 author:
   name: "Soumyaroop Nandi"
   avatar: "/images/ISI.jpg"
@@ -42,16 +34,12 @@ author:
       icon: "far fa-file-pdf"
       url: "/assets/cv/Soumyaroop_Nandi_CV.pdf"
 
-# -----------------------------------------------------
-# Build Settings
-# -----------------------------------------------------
+# Build
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
 
-# -----------------------------------------------------
-# Plugins
-# -----------------------------------------------------
+# Plugins (both are required for your setup)
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
@@ -59,32 +47,27 @@ plugins:
   - jekyll-seo-tag
   - jekyll-scholar
 
-# -----------------------------------------------------
-# Includes and Collections
-# -----------------------------------------------------
+# Make sure Jekyll processes these folders
 include: ["_pages", "_bib"]
 
+# Projects collection (optional)
 collections:
   projects:
     output: true
     permalink: /projects/:name/
 
-# -----------------------------------------------------
-# Scholar Configuration
-# -----------------------------------------------------
+# jekyll-scholar
 scholar:
   style: apa
   locale: en
   source: _bib
   bibliography: publications.bib
   bibliography_template: bib_template
-  query: "@*"   # show all entries
+  query: "@*"
   sort_by: year, month
   order: descending
 
-# -----------------------------------------------------
-# Page Defaults
-# -----------------------------------------------------
+# Defaults
 defaults:
   - scope:
       path: ""
@@ -102,7 +85,4 @@ defaults:
       sidebar:
         nav: "main"
 
-# -----------------------------------------------------
-# Analytics (optional)
-# -----------------------------------------------------
 # google_analytics: G-XXXXXXXXXX
