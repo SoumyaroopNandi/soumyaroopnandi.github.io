@@ -24,6 +24,4 @@ To add new publications, simply edit that file and commit — the page will upda
 
 ---
 
-## 🧾 Full Bibliography
 
-{% bibliography --template bib_template %}
