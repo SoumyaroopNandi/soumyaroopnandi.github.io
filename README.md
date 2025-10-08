@@ -9,8 +9,7 @@ The site is built using **[Jekyll](https://jekyllrb.com/)** and the **[Minimal M
 
 ## 🧑‍💻 About Me
 
-I am a **Ph.D. graduate in Computer Science** from the **University of Southern California (USC)**, where my research focused on  
-**Artificial Intelligence, Computer Vision, and Image Forensics** — developing state-space and information-theoretic models for detecting generative image forgeries.
+I am a **Ph.D. graduate in Computer Science** from the **University of Southern California (USC)**, where my research focused on **Artificial Intelligence, Computer Vision, and Image Forensics** — developing state-space and information-theoretic models for detecting generative image forgeries.
 
 Before my Ph.D., I earned an **M.S. in Electrical Engineering** from the **University of Kansas**, where my thesis explored object tracking and adaptive detection for autonomous UAV navigation.  
 
