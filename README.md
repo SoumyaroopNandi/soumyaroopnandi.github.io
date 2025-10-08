@@ -1,7 +1,7 @@
 # 🌐 Soumyaroop Nandi — Personal Academic Website
 
 This repository contains the source code for my academic website:
-➡️ [https://soumyaroopnandi.github.io](https://soumyaroopnandi.github.io)
+➡️ [https://soumyaroopnandi.github.io](https://soumyaroop.nandi.com)
 
 The site is built using **[Jekyll](https://jekyllrb.com/)** and the **[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)** theme, deployed automatically via **GitHub Actions**.
 
