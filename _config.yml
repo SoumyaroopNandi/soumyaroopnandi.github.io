@@ -4,9 +4,14 @@
 
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
-url: "https://soumyaroop.nandi.com"  # Custom domain
-baseurl: ""   # Keep empty for root of your domain
+url: "https://soumyaroop.nandi.com"   # Custom domain
+baseurl: ""   # Keep empty for root domain
 timezone: "America/Los_Angeles"
+
+# -----------------------------------------------------
+# Repository information (needed for GitHub Actions)
+# -----------------------------------------------------
+repository: "SoumyaroopNandi/soumyaroop.nandi.com"
 
 # -----------------------------------------------------
 # Theme and Appearance
@@ -58,7 +63,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-include-cache
-  - jekyll-scholar
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-gist
 
 # -----------------------------------------------------
 # Includes and Collections
@@ -71,7 +78,7 @@ collections:
     permalink: /projects/:name/
 
 # -----------------------------------------------------
-# Scholar Configuration
+# Scholar Configuration (optional)
 # -----------------------------------------------------
 scholar:
   style: apa
@@ -79,7 +86,7 @@ scholar:
   source: _bib
   bibliography: publications.bib
   bibliography_template: bib_template
-  query: "@*"   # show all by default
+  query: "@*"
   sort_by: year, month
   order: descending
 
@@ -104,9 +111,9 @@ defaults:
         nav: "main"
 
 # -----------------------------------------------------
-# Navigation (in _data/navigation.yml)
+# Navigation (stored in _data/navigation.yml)
 # -----------------------------------------------------
-# Example _data/navigation.yml:
+# Example structure:
 # main:
 #   - title: "About"
 #     url: /about/
