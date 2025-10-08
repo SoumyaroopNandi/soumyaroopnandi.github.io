@@ -1,0 +1,14 @@
+---
+# Only front matter so Jekyll processes it
+---
+
+@import "minimal-mistakes";
+
+.author__avatar img {
+  width: 180px !important;  /* increase size */
+  height: auto !important;
+  border-radius: 50%;       /* keep circular shape */
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
