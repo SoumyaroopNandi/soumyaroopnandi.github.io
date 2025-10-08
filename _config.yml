@@ -4,12 +4,12 @@
 
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
-url: "https://soumyaroopnandi.github.io"   # Use GitHub Pages default domain
-baseurl: ""   # Leave empty for root site
+url: "https://soumyaroopnandi.github.io"   # GitHub Pages domain
+baseurl: ""                                 # Root of the site
 timezone: "America/Los_Angeles"
 
 # -----------------------------------------------------
-# Repository information (needed for GitHub Actions)
+# Repository (for GitHub Pages + metadata)
 # -----------------------------------------------------
 repository: "SoumyaroopNandi/soumyaroopnandi.github.io"
 
@@ -18,6 +18,10 @@ repository: "SoumyaroopNandi/soumyaroopnandi.github.io"
 # -----------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"   # Options: default, dark, air, contrast, neon, etc.
+
+# Use your own stylesheet (create /assets/css/main.scss)
+sass:
+  style: compressed
 
 # -----------------------------------------------------
 # Author Information
@@ -33,16 +37,16 @@ author:
       url: "mailto:soumyarn@usc.edu"
     - label: "Google Scholar"
       icon: "ai ai-google-scholar"
-      url: "https://scholar.google.com/citations?user=YOUR_ID"
+      url: "https://https://scholar.google.com/citations?user=Xs3WlqQAAAAJ&hl=en"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/SoumyaroopNandi"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/YOUR_HANDLE/"
+      url: "https://www.linkedin.com/in/soumyaroop-nandi-6a412967/"
     - label: "Twitter/X"
       icon: "fab fa-x-twitter"
-      url: "https://x.com/YOUR_HANDLE"
+      url: "https://https://x.com/SoumyaroopNandi"
     - label: "CV (PDF)"
       icon: "far fa-file-pdf"
       url: "/assets/cv/Soumyaroop_Nandi_CV.pdf"
@@ -53,6 +57,9 @@ author:
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
+
+paginate: 5
+paginate_path: /page:num/
 
 # -----------------------------------------------------
 # Plugins
@@ -66,9 +73,10 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
   - jekyll-gist
+  - jekyll-scholar
 
 # -----------------------------------------------------
-# Includes and Collections
+# Collections and Includes
 # -----------------------------------------------------
 include: ["_pages", "_bib"]
 
@@ -78,7 +86,7 @@ collections:
     permalink: /projects/:name/
 
 # -----------------------------------------------------
-# Scholar Configuration (optional)
+# jekyll-scholar
 # -----------------------------------------------------
 scholar:
   style: apa
@@ -91,7 +99,7 @@ scholar:
   order: descending
 
 # -----------------------------------------------------
-# Page Defaults
+# Defaults
 # -----------------------------------------------------
 defaults:
   - scope:
@@ -111,19 +119,24 @@ defaults:
         nav: "main"
 
 # -----------------------------------------------------
-# Navigation (stored in _data/navigation.yml)
+# HTML compression (optional)
 # -----------------------------------------------------
-# main:
-#   - title: "About"
-#     url: /about/
-#   - title: "Research"
-#     url: /research/
-#   - title: "Publications"
-#     url: /publications/
-#   - title: "Teaching"
-#     url: /teaching/
-#   - title: "Contact"
-#     url: /contact/
+compress_html:
+  clippings: all
+  blanklines: false
+  comments: ["<!-- ", " -->"]
+
+# -----------------------------------------------------
+# Excludes (speed up build / avoid noise)
+# -----------------------------------------------------
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - .github
 
 # -----------------------------------------------------
 # Analytics (optional)
