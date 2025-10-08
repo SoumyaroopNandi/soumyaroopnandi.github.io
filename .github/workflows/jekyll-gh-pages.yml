@@ -2,33 +2,42 @@ name: Build and Deploy Jekyll
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read        # read is sufficient for building
   pages: write
   id-token: write
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
+
+      # Prepare the Pages environment (sets correct base path, etc.)
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: bundle install --path vendor/bundle
+
       - name: Build site
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace --verbose
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
