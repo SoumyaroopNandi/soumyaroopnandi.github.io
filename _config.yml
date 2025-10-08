@@ -57,7 +57,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  # - jekyll-scholar   # Enable only after adding _bib/publications.bib
+  - jekyll-scholar
 
 # -----------------------------------------------------
 # Includes and Collections
@@ -70,18 +70,17 @@ collections:
     permalink: /projects/:name/
 
 # -----------------------------------------------------
-# Scholar Configuration (optional)
+# Scholar Configuration
 # -----------------------------------------------------
-# Uncomment this block if you add jekyll-scholar and publications.bib
-# scholar:
-#   style: apa
-#   locale: en
-#   source: _bib
-#   bibliography: publications.bib
-#   bibliography_template: bib_template
-#   query: "@*"   # show all by default
-#   sort_by: year, month
-#   order: descending
+scholar:
+  style: apa
+  locale: en
+  source: _bib
+  bibliography: publications.bib
+  bibliography_template: bib_template
+  query: "@*"   # show all entries
+  sort_by: year, month
+  order: descending
 
 # -----------------------------------------------------
 # Page Defaults
@@ -102,22 +101,6 @@ defaults:
       author_profile: true
       sidebar:
         nav: "main"
-
-# -----------------------------------------------------
-# Navigation Data File (stored in _data/navigation.yml)
-# -----------------------------------------------------
-# Example _data/navigation.yml:
-# main:
-#   - title: "About"
-#     url: /about/
-#   - title: "Research"
-#     url: /research/
-#   - title: "Publications"
-#     url: /publications/
-#   - title: "Teaching"
-#     url: /teaching/
-#   - title: "Contact"
-#     url: /contact/
 
 # -----------------------------------------------------
 # Analytics (optional)
