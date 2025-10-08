@@ -1,14 +1,22 @@
+# =====================================================
+#  Site Configuration for Soumyaroop Nandi’s Website
+# =====================================================
+
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
-url: "https://soumyaroop.nandi.com"
-baseurl: ""
+url: "https://soumyaroop.nandi.com"  # Custom domain
+baseurl: ""   # Keep empty for root of your domain
 timezone: "America/Los_Angeles"
 
-# Theme
+# -----------------------------------------------------
+# Theme and Appearance
+# -----------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "default"   # Options: default, dark, air, contrast, neon, etc.
 
-# Author
+# -----------------------------------------------------
+# Author Information
+# -----------------------------------------------------
 author:
   name: "Soumyaroop Nandi"
   avatar: "/images/ISI.jpg"
@@ -34,40 +42,50 @@ author:
       icon: "far fa-file-pdf"
       url: "/assets/cv/Soumyaroop_Nandi_CV.pdf"
 
-# Build
+# -----------------------------------------------------
+# Build Settings
+# -----------------------------------------------------
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
 
-# Plugins (both are required for your setup)
+# -----------------------------------------------------
+# Plugins
+# -----------------------------------------------------
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-include-cache
   - jekyll-scholar
 
-# Make sure Jekyll processes these folders
+# -----------------------------------------------------
+# Includes and Collections
+# -----------------------------------------------------
 include: ["_pages", "_bib"]
 
-# Projects collection (optional)
 collections:
   projects:
     output: true
     permalink: /projects/:name/
 
-# jekyll-scholar
+# -----------------------------------------------------
+# Scholar Configuration
+# -----------------------------------------------------
 scholar:
   style: apa
   locale: en
   source: _bib
   bibliography: publications.bib
   bibliography_template: bib_template
-  query: "@*"
+  query: "@*"   # show all by default
   sort_by: year, month
   order: descending
 
-# Defaults
+# -----------------------------------------------------
+# Page Defaults
+# -----------------------------------------------------
 defaults:
   - scope:
       path: ""
@@ -85,4 +103,23 @@ defaults:
       sidebar:
         nav: "main"
 
+# -----------------------------------------------------
+# Navigation (in _data/navigation.yml)
+# -----------------------------------------------------
+# Example _data/navigation.yml:
+# main:
+#   - title: "About"
+#     url: /about/
+#   - title: "Research"
+#     url: /research/
+#   - title: "Publications"
+#     url: /publications/
+#   - title: "Teaching"
+#     url: /teaching/
+#   - title: "Contact"
+#     url: /contact/
+
+# -----------------------------------------------------
+# Analytics (optional)
+# -----------------------------------------------------
 # google_analytics: G-XXXXXXXXXX
