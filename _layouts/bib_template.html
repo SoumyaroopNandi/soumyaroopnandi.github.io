@@ -1,0 +1,6 @@
+{% raw %}{% for entry in bibliography %}
+<div class="pub-item">
+  <p><strong>{{ entry.title }}</strong><br>
+  {{ entry.author }}. <em>{{ entry.container-title | default: entry.journal }}</em>, {{ entry.issued | default: entry.year }}.</p>
+</div>
+{% endfor %}{% endraw %}
