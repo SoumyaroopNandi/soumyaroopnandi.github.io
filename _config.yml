@@ -4,14 +4,14 @@
 
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
-url: "https://soumyaroop.nandi.com"   # Custom domain
-baseurl: ""   # Keep empty for root domain
+url: "https://soumyaroopnandi.github.io"   # Use GitHub Pages default domain
+baseurl: ""   # Leave empty for root site
 timezone: "America/Los_Angeles"
 
 # -----------------------------------------------------
 # Repository information (needed for GitHub Actions)
 # -----------------------------------------------------
-repository: "SoumyaroopNandi/soumyaroop.nandi.com"
+repository: "SoumyaroopNandi/soumyaroopnandi.github.io"
 
 # -----------------------------------------------------
 # Theme and Appearance
@@ -113,7 +113,6 @@ defaults:
 # -----------------------------------------------------
 # Navigation (stored in _data/navigation.yml)
 # -----------------------------------------------------
-# Example structure:
 # main:
 #   - title: "About"
 #     url: /about/
