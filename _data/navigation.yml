@@ -1,8 +1,5 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "Biography"
-    url: /about/
+# _data/navigation.yml
+header:
   - title: "Research"
     url: /research/
   - title: "Publications"
@@ -11,5 +8,3 @@ main:
     url: /projects/
   - title: "Teaching"
     url: /teaching/
-  - title: "Contact"
-    url: /contact/
