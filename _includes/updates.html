@@ -19,44 +19,47 @@
 <style>
   /* Scrollable Highlights Section */
   .updates-container {
-    max-height: 220px;          /* Adjust scroll height */
+    max-height: 220px;                 /* adjust to taste */
     overflow-y: auto;
-    padding-right: 0.5rem;
-    margin-top: 0.5rem;
+    padding: .6rem .6rem .6rem .4rem;
+    margin-top: .5rem;
     border: 1px solid #e5e5e5;
     border-radius: 6px;
     background: #fafafa;
   }
 
-  /* Scrollbar styling */
   .updates-container::-webkit-scrollbar { width: 6px; }
   .updates-container::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0,0,0,.25);
     border-radius: 4px;
   }
 
-  /* Individual update items */
+  /* Each update line */
   .update-item {
     display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.4rem;
-    font-size: 0.95rem;
+    align-items: center;               /* ✅ centers arrow with text */
+    gap: .55rem;
+    margin: .35rem 0;
     line-height: 1.4;
   }
 
-  /* Animated arrow */
+  /* Arrow styling */
   .arrow {
-    color: #043361;
-    font-weight: bold;
-    font-size: 1.2rem;
+    display: inline-flex;              /* ✅ perfect vertical centering */
+    align-items: center;
+    justify-content: center;
+    width: 1.05rem;                    /* fixed width keeps all text aligned */
+    height: 1.05rem;                   /* matches text line height */
+    font-size: 1.05rem;
+    line-height: 1;
+    color: #d32f2f;                    /* ✅ red arrow */
     flex-shrink: 0;
-    animation: pulse 1.8s infinite ease-in-out;
+    animation: nudge 1.8s ease-in-out infinite;
   }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 0.4; transform: translateX(0); }
-    50% { opacity: 1; transform: translateX(3px); }
+  @keyframes nudge {
+    0%, 100% { opacity:.55; transform: translateX(0); }
+    50%      { opacity:1;   transform: translateX(3px); }
   }
 
   .update-text a {
