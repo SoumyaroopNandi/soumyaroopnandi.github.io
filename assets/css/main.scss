@@ -2,12 +2,14 @@
 # Only the main Sass file needs front matter for Jekyll to build it
 ---
 
-/* Minimal Mistakes base */
+/* =========================================================
+   Base Theme Imports
+   ========================================================= */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
 /* =========================================================
-   Layout polish
+   Layout and Spacing
    ========================================================= */
 
 /* ===== Masthead: no extra space below ===== */
@@ -15,8 +17,7 @@
 .masthead,
 .masthead__inner { max-width: none !important; }
 
-/* ===== Remove top white gap under navbar (core fix) ===== */
-/* Theme wrappers occasionally add top padding/margins. */
+/* ===== Remove top white gap under navbar ===== */
 .site-content,
 .initial-content,
 .page__inner-wrap,
@@ -25,26 +26,25 @@
   margin-top: 0 !important;
 }
 
-/* Break margin-collapsing at the very top of content. */
-.page__content {
-  border-top: 1px solid transparent !important;
-}
+/* Break margin collapsing */
+.page__content { border-top: 1px solid transparent !important; }
 
-/* Ensure the very first block in content can’t re-introduce space. */
 .page__title,
 .page__lead { margin-top: 0 !important; padding-top: 0 !important; }
 
 .page__content > :first-child { margin-top: 0 !important; }
 
-/* If an anchor precedes the H1, prevent accidental spacing. */
 #about { margin-top: 0 !important; padding-top: 0 !important; }
 
+.wrap,
+.page { padding-top: 0 !important; margin-top: 0 !important; }
+
 /* =========================================================
-   Sidebar: sticky + scrollable column
+   Sidebar: sticky, scrollable
    ========================================================= */
-.sidebar{
+.sidebar {
   width: 320px;
-  position: sticky; top: 64px;            /* ≈ header height */
+  position: sticky; top: 64px;             /* ≈ header height */
   height: calc(100vh - 64px);
   align-self: flex-start;
   overflow-y: auto; overflow-x: hidden;
@@ -52,43 +52,58 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,.25) transparent;
 }
-.sidebar::-webkit-scrollbar{ width: 8px; }
-.sidebar::-webkit-scrollbar-thumb{
+.sidebar::-webkit-scrollbar { width: 8px; }
+.sidebar::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,.25);
   border-radius: 4px;
 }
 
-@media (max-width: 768px){
-  .sidebar{
-    position: static; width: auto; height: auto;
-    overflow: visible; padding-right: 0;
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
   }
 }
 
 /* =========================================================
-   Author card: square avatar with subtle depth
+   Author Profile and Avatar
    ========================================================= */
-.author__profile{ margin: 0; padding: 0 .5rem; }
+.author__profile {
+  margin: 0;
+  padding: 0 .5rem;
+  text-align: center;
+}
 
-.author__profile .author__avatar{
-  position: relative; width: 280px; aspect-ratio: 1/1;
-  border-radius: 12px; overflow: hidden; margin: 0 auto 1rem;
-  background: #f7f7f7; border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+/* ===== Rectangular large avatar ===== */
+.author__profile .author__avatar {
+  position: relative;
+  width: 300px;         /* wider */
+  height: 400px;        /* rectangular ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 1.2rem;
+  background: #f7f7f7;
+  border: 1px solid rgba(0,0,0,.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
   padding: 0 !important;
 }
 
-.author__profile .author__avatar img{
-  position: absolute; inset: 0; width: 100% !important; height: 100% !important;
-  object-fit: cover; object-position: center; display: block; border-radius: 0; box-shadow: none;
+.author__profile .author__avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* =========================================================
-   Misc spacing guards
+   Misc small polish
    ========================================================= */
-/* REAL no-gap fix under nav (prevents margin-collapsing) */
 .initial-content { margin-top: 0 !important; padding-top: 0 !important; }
-
-/* Defensive: some skins add small top spacing on containers. */
-.wrap,
-.page { padding-top: 0 !important; margin-top: 0 !important; }
