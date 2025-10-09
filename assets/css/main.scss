@@ -1,156 +1,110 @@
----
-# Only the main Sass file needs front matter for Jekyll to build it
----
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
-
-
-
-
 // ---
 // # Only the main Sass file needs front matter for Jekyll to build it
 // ---
 
-// @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 // @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 // @import "minimal-mistakes";
 
-// /* =========================================================
-//    Rectangular Author Image Override
-//    ========================================================= */
 
-// .author__profile {
-//   margin: 0;
-//   padding: 0 .5rem;
-//   text-align: center;
-// }
 
-// .author__profile .author__avatar {
-//   position: relative;
-//   width: 300px !important;     /* wider rectangle */
-//   height: 420px !important;    /* taller aspect */
-//   border-radius: 10px !important;
-//   overflow: hidden !important;
-//   margin: 0 auto 1.5rem !important;
-//   background: #f7f7f7;
-//   border: 1px solid rgba(0, 0, 0, .1);
-//   box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
-//   max-width: none !important;
-// }
 
-// .author__profile .author__avatar img {
-//   position: absolute !important;
-//   inset: 0 !important;
-//   width: 100% !important;
-//   height: 100% !important;
-//   object-fit: cover !important;
-//   object-position: center !important;
-//   border-radius: 0 !important;       /* ✅ removes circle */
-//   box-shadow: none !important;
-//   max-width: none !important;
-// }
+---
+# Only the main Sass file needs front matter for Jekyll to build it
+---
 
-// /* =========================================================
-//    Typography + Layout refinements (optional)
-//    ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
 
-// body {
-//   background-color: #fff;
-//   color: #000;
-//   font: 15px/1.6 'Crimson Pro', 'Lato', sans-serif;
-//   margin: 0;
-//   padding: 0;
-// }
+/* =========================================================
+   Rectangular Author Image Override
+   ========================================================= */
 
-// h1, h2, h3, h4, h5 {
-//   color: #043361;
-//   font-weight: 500;
-// }
+.author__profile {
+  margin: 0;
+  padding: 0 .5rem;
+  text-align: center;
+}
 
-// a {
-//   color: #043361;
-//   text-decoration: none;
-// }
-// a:hover {
-//   color: #0066cc;
-// }
+.author__profile .author__avatar {
+  position: relative;
+  width: 300px !important;     /* wider rectangle */
+  height: 420px !important;    /* taller aspect */
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  margin: 0 auto 1.5rem !important;
+  background: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+  max-width: none !important;
+}
 
-// /* =========================================================
-//    Remove gap under masthead
-//    ========================================================= */
-// .masthead { margin-bottom: 0 !important; }
-// .initial-content, .page__content {
-//   margin-top: 0 !important;
-//   padding-top: 0 !important;
-//   border-top: 1px solid transparent !important;
-// }
-// .page__content > :first-child { margin-top: 0 !important; }
-// #about { margin-top: 0 !important; padding-top: .01px; }
+.author__profile .author__avatar img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;       /* ✅ removes circle */
+  box-shadow: none !important;
+  max-width: none !important;
+}
 
-// /* =========================================================
-//    Sidebar scroll behavior
-//    ========================================================= */
-// .sidebar {
-//   width: 320px;
-//   position: sticky;
-//   top: 64px;
-//   height: calc(100vh - 64px);
-//   align-self: flex-start;
-//   overflow-y: auto;
-//   overflow-x: hidden;
-//   padding-right: 6px;
-//   scrollbar-width: thin;
-//   scrollbar-color: rgba(0, 0, 0, .25) transparent;
-// }
-// .sidebar::-webkit-scrollbar { width: 8px; }
-// .sidebar::-webkit-scrollbar-thumb {
-//   background: rgba(0, 0, 0, .25);
-//   border-radius: 4px;
-// }
+/* =========================================================
+   Typography + Layout refinements (optional)
+   ========================================================= */
 
-// @media (max-width: 768px) {
-//   .sidebar {
-//     position: static;
-//     width: auto;
-//     height: auto;
-//     overflow: visible;
-//     padding-right: 0;
-//   }
-// }
+body {
+  background-color: #fff;
+  color: #000;
+  font: 15px/1.6 'Crimson Pro', 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-// /* Remove the invisible page header and extra top spacing on home */
-// .page__header,
-// .page__meta { display: none !important; }
+h1, h2, h3, h4, h5 {
+  color: #043361;
+  font-weight: 500;
+}
 
-// .page__inner-wrap,
-// .page__content,
-// .initial-content {
-//   margin-top: 0 !important;
-//   padding-top: 0 !important;
-//   border-top: 1px solid transparent !important; /* break margin collapsing */
-// }
+a {
+  color: #043361;
+  text-decoration: none;
+}
+a:hover {
+  color: #0066cc;
+}
 
-// .page__content > :first-child { margin-top: 0 !important; }
-// #about { margin-top: 0 !important; padding-top: .01px; }
 
-// /* Home: remove top band under masthead */
-// .no-title .page__header,
-// .no-title .page__title,
-// .no-title .page__meta,
-// .no-title .breadcrumbs { display: none !important; }
+/* =========================================================
+   Sidebar scroll behavior
+   ========================================================= */
+.sidebar {
+  width: 320px;
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+  align-self: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, .25) transparent;
+}
+.sidebar::-webkit-scrollbar { width: 8px; }
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .25);
+  border-radius: 4px;
+}
 
-// .no-title .initial-content,
-// .no-title .page__inner-wrap,
-// .no-title .page__content,
-// .no-title .page {
-//   margin-top: 0 !important;
-//   padding-top: 0 !important;
-//   border-top: 1px solid transparent !important; /* break margin-collapsing */
-// }
-
-// .no-title .page__content > :first-child { margin-top: 0 !important; }
-// .no-title #about { margin-top: 0 !important; padding-top: .01px !important; }
-// .no-title #about > h1 { margin-top: 0 !important; }
-
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
+}
