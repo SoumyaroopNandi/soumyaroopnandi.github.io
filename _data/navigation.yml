@@ -1,4 +1,18 @@
 # _data/navigation.yml
+
+# Locale-scoped menu (used when site.locale is set)
+en:
+  main:
+    - title: "Research"
+      url: /research/
+    - title: "Publications"
+      url: /publications/
+    - title: "Projects"
+      url: /projects/
+    - title: "Teaching"
+      url: /teaching/
+
+# Fallback menu (used when no locale is set)
 main:
   - title: "Research"
     url: /research/
