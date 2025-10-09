@@ -8,7 +8,7 @@ The website is built using **Jekyll** and the **Minimal Mistakes** theme, and au
 
 ## 🧑‍💻 About Me
 
-I am a **recent Ph.D. graduate in Computer Science** from the **University of Southern California (USC)**, specializing in **Artificial Intelligence (AI)**, **Computer Vision**, and **Deep Learning**. My doctoral research at the **USC Information Sciences Institute** focused on developing **state-space** and **information-theoretic deep learning models** for *AI-generated image forgery detection*, *generative model fingerprinting*, and *vision-language understanding*.
+I am a **recent Ph.D. graduate in Computer Science** from the **University of Southern California (USC)**, specializing in **Artificial Intelligence (AI)**, **Computer Vision**, and **Deep Learning**. I was advised by **Dr. Prem Natarajan** at the **USC Information Sciences Institute**, where my doctoral researchfocused on developing **state-space** and **information-theoretic deep learning models** for AI-generated image forgery detection, generative model fingerprinting, and vision-language understanding.
 
 I bring **hands-on experience across the full AI stack** — from **model design and optimization** (*SSMs, VLMs, Diffusion Models, GANs, CNNs, Transformers*) to **data curation**, **multimodal learning**, and **large-scale deployment**. My projects bridge vision, language, and generative modeling, with applications in **biomedical imaging**, **digital content integrity**, and **trustworthy AI systems**.
 
