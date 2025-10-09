@@ -6,49 +6,89 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+/* =========================================================
+   Layout polish
+   ========================================================= */
+
 /* ===== Masthead: no extra space below ===== */
 .masthead { margin-bottom: 0 !important; }
 .masthead,
 .masthead__inner { max-width: none !important; }
 
-/* ===== Sidebar: sticky + scrollable column ===== */
+/* ===== Remove top white gap under navbar (core fix) ===== */
+/* Theme wrappers occasionally add top padding/margins. */
+.site-content,
+.initial-content,
+.page__inner-wrap,
+.page__content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Break margin-collapsing at the very top of content. */
+.page__content {
+  border-top: 1px solid transparent !important;
+}
+
+/* Ensure the very first block in content can’t re-introduce space. */
+.page__title,
+.page__lead { margin-top: 0 !important; padding-top: 0 !important; }
+
+.page__content > :first-child { margin-top: 0 !important; }
+
+/* If an anchor precedes the H1, prevent accidental spacing. */
+#about { margin-top: 0 !important; padding-top: 0 !important; }
+
+/* =========================================================
+   Sidebar: sticky + scrollable column
+   ========================================================= */
 .sidebar{
-  width:320px;
-  position:sticky; top:64px;      /* ≈ header height */
-  height:calc(100vh - 64px);
-  align-self:flex-start;
-  overflow-y:auto; overflow-x:hidden;
-  padding-right:6px;
-  scrollbar-width:thin;
-  scrollbar-color:rgba(0,0,0,.25) transparent;
+  width: 320px;
+  position: sticky; top: 64px;            /* ≈ header height */
+  height: calc(100vh - 64px);
+  align-self: flex-start;
+  overflow-y: auto; overflow-x: hidden;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,.25) transparent;
 }
-.sidebar::-webkit-scrollbar{ width:8px; }
-.sidebar::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.25); border-radius:4px; }
-
-@media (max-width:768px){
-  .sidebar{ position:static; width:auto; height:auto; overflow:visible; padding-right:0; }
+.sidebar::-webkit-scrollbar{ width: 8px; }
+.sidebar::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,.25);
+  border-radius: 4px;
 }
 
-/* ===== Square avatar ===== */
-.author__profile{ margin:0; padding:0 .5rem; }
+@media (max-width: 768px){
+  .sidebar{
+    position: static; width: auto; height: auto;
+    overflow: visible; padding-right: 0;
+  }
+}
+
+/* =========================================================
+   Author card: square avatar with subtle depth
+   ========================================================= */
+.author__profile{ margin: 0; padding: 0 .5rem; }
+
 .author__profile .author__avatar{
-  position:relative; width:280px; aspect-ratio:1/1;
-  border-radius:12px; overflow:hidden; margin:0 auto 1rem;
-  background:#f7f7f7; border:1px solid rgba(0,0,0,.08);
-  box-shadow:0 6px 18px rgba(0,0,0,.15);
-  padding:0 !important;
-}
-.author__profile .author__avatar img{
-  position:absolute; inset:0; width:100% !important; height:100% !important;
-  object-fit:cover; object-position:center; display:block; border-radius:0; box-shadow:none;
+  position: relative; width: 280px; aspect-ratio: 1/1;
+  border-radius: 12px; overflow: hidden; margin: 0 auto 1rem;
+  background: #f7f7f7; border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  padding: 0 !important;
 }
 
-/* ===== REAL no-gap fix under nav (prevents margin-collapsing) ===== */
-.initial-content{ margin-top:0 !important; padding-top:0 !important; }
-.page__content{
-  margin-top:0 !important; padding-top:0 !important;
-  border-top:1px solid transparent !important;  /* breaks margin-collapsing */
+.author__profile .author__avatar img{
+  position: absolute; inset: 0; width: 100% !important; height: 100% !important;
+  object-fit: cover; object-position: center; display: block; border-radius: 0; box-shadow: none;
 }
-.page__title, .page__lead{ margin-top:0 !important; padding-top:0 !important; }
-.page__content > :first-child{ margin-top:0 !important; }
-#about{ margin-top:0 !important; padding-top:.01px; } /* if an anchor precedes the H1 */
+
+/* =========================================================
+   Misc spacing guards
+   ========================================================= */
+/* REAL no-gap fix under nav (prevents margin-collapsing) */
+.initial-content { margin-top: 0 !important; padding-top: 0 !important; }
+
+/* Defensive: some skins add small top spacing on containers. */
+.wrap,
+.page { padding-top: 0 !important; margin-top: 0 !important; }
