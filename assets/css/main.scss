@@ -45,3 +45,12 @@
 @media (min-width: 1200px) {
   .page__inner { max-width: 1280px; }
 }
+
+/* ===== Justify About Me text ===== */
+.home-main p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;      /* improves readability */
+  margin-bottom: 1rem;   /* keeps spacing consistent */
+}
+
