@@ -39,14 +39,3 @@ With a strong foundation in **AI model development**, **generative systems**, an
 
 ---
 
-## ⚙️ Repository Structure
-.
-├── _config.yml # Jekyll site configuration
-├── _pages/ # Individual pages (About, Research, Publications, etc.)
-├── _posts/ # Blog or news posts
-├── assets/ # Images, CSS, JS, and other static assets
-├── _data/ # Navigation, site metadata, and configuration data
-├── _includes/ # HTML partials for reuse across layouts
-├── _layouts/ # Page and post layout templates
-├── index.md # Homepage
-└── README.md # This file
