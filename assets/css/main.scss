@@ -124,3 +124,9 @@
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+/* Hide brand text on the far left and make links start at the left edge */
+.masthead .site-title { display: none !important; }
+.masthead__inner .greedy-nav { justify-content: flex-start !important; }
+.masthead__inner .greedy-nav .visible-links { margin-left: 0 !important; }
+
