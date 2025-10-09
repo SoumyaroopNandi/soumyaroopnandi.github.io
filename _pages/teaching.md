@@ -14,8 +14,8 @@ author_profile: true
 - Supervised 20+ Ph.D. and Master’s TAs across multiple semesters  
 - Designed instructional material, rubrics, and project guidelines for exams, quizzes, and assignments  
 - Conducted tutorials, managed online Q&A forums (*Piazza*), and held one-on-one office hours  
-- Delivered **guest lectures** on *AI integrity*, *diffusion models*, and *state-space models (SSMs)*  
-- Mentored graduate projects on *biomedical image forensics* and *vision-language modeling*
+- Delivered guest lectures on AI integrity, diffusion models, and state-space models (SSMs)  
+- Mentored graduate projects on biomedical image forensics and vision-language modeling
 
 ---
 
