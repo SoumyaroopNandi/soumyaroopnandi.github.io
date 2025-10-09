@@ -10,22 +10,22 @@ author_profile: true
 - **Nandi, S.**, Natarajan, P., & Abd-Almageed, W. (2023).  
   **TrainFors: A Large Benchmark Training Dataset for Image Manipulation Detection and Localization.**  
   *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 403–414.  
-  [PDF](https://openaccess.thecvf.com/content/ICCV2023W/DFAD/papers/Nandi_TrainFors_A_Large_Benchmark_Training_Dataset_for_Image_Manipulation_Detection_ICCVW_2023_paper.pdf)
+  [PDF](https://openaccess.thecvf.com/content/ICCV2023W/DFAD/papers/Nandi_TrainFors_A_Large_Benchmark_Training_Dataset_for_Image_Manipulation_Detection_ICCVW_2023_paper.pdf)/[Code](https://github.com/vimal-isi-edu/TrainFors)
 
 - Sabir, E., **Nandi, S.**, AbdAlmageed, W., & Natarajan, P. (2022).  
   **MONet: Multi-Scale Overlap Network for Duplication Detection in Biomedical Images.**  
   *IEEE International Conference on Image Processing (ICIP)*, 3793–3797.  
-  [PDF](https://arxiv.org/pdf/2207.09107)
+  [PDF](https://arxiv.org/pdf/2207.09107)/[Code](https://github.com/vimal-isi-edu/BioFors)
 
 - Sabir, E., **Nandi, S.**, Abd-Almageed, W., & Natarajan, P. (2021).  
   **BioFors: A Large Biomedical Image Forensics Dataset.**  
   *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 10963–10973.  
-  [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Sabir_BioFors_A_Large_Biomedical_Image_Forensics_Dataset_ICCV_2021_paper.pdf)
+  [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Sabir_BioFors_A_Large_Biomedical_Image_Forensics_Dataset_ICCV_2021_paper.pdf)/[Code](https://github.com/vimal-isi-edu/BioFors)
 
 - Cheng, J., **Nandi, S.**, Natarajan, P., & Abd-Almageed, W. (2021).  
   **SIGN: Spatial-Information Incorporated Generative Network for Generalized Zero-Shot Semantic Segmentation.**  
   *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 9556–9566.  
-  [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Cheng_SIGN_Spatial-Information_Incorporated_Generative_Network_for_Generalized_Zero-Shot_Semantic_Segmentation_ICCV_2021_paper.pdf)
+  [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Cheng_SIGN_Spatial-Information_Incorporated_Generative_Network_for_Generalized_Zero-Shot_Semantic_Segmentation_ICCV_2021_paper.pdf)/[Code](https://github.com/cplusx/SIGN)
 
 ---
 
