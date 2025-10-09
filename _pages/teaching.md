@@ -1,11 +1,10 @@
 ---
-title: "Teaching"
+title: "🎓 Teaching"
 permalink: /teaching/
 layout: single
 author_profile: true
 ---
 
-# 🎓 Teaching Experience
 
 ## University of Southern California (USC), Los Angeles, CA  
 **Head Teaching Assistant** — *Aug 2019 – Dec 2025*  
@@ -33,4 +32,3 @@ author_profile: true
 
 ---
 
-📘 *Teaching interests:* Machine Learning, Computer Vision, Generative AI, State-Space Models, and AI Integrity.
