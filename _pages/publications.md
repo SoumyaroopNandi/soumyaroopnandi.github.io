@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-# 🎓 Ph.D. Research Publications (University of Southern California)
+# 🎓 Ph.D. Research Publications (USC)
 
 - **Nandi, S.**, Natarajan, P., & Abd-Almageed, W. (2023). **TrainFors: A Large Benchmark Training Dataset for Image Manipulation Detection and Localization.** *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 403–414. [PDF](https://openaccess.thecvf.com/content/ICCV2023W/DFAD/papers/Nandi_TrainFors_A_Large_Benchmark_Training_Dataset_for_Image_Manipulation_Detection_ICCVW_2023_paper.pdf)/[Code](https://github.com/vimal-isi-edu/TrainFors)
 
