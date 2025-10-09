@@ -59,19 +59,20 @@
    =============================== */
 
 .author__avatar img {
-  width: 210px;
-  height: 210px;
-  border-radius: 8px;
+  width: 260px;           /* increased from 210px */
+  height: 260px;
+  border-radius: 10px;    /* keeps rectangular with slight rounding */
   object-fit: cover;
   display: block;
-  margin: 0 auto 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 1.25rem auto;  /* centered with a bit more spacing below */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* slightly deeper shadow */
 }
 
 /* Keep sidebar balanced with larger avatar */
 .sidebar {
-  width: 280px;
+  width: 300px;           /* widen sidebar to fit larger image */
 }
+
 
 /* ===============================
    Force justified text on Home/About
