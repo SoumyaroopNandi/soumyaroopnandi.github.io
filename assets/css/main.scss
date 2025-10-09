@@ -35,25 +35,23 @@
    AUTHOR SIDEBAR: sticky + scrollable
    =============================== */
 
-/* Make the whole left column stick under the header and scroll internally */
 .sidebar {
-  width: 320px;                    /* keep main content roomy */
+  width: 320px;
   position: sticky;
-  top: 64px;                       /* distance from top (≈ header height) */
+  top: 64px; /* height of header */
   align-self: flex-start;
 }
 
-/* The content inside the sidebar becomes the scroll container */
 .author__profile {
-  max-height: calc(100vh - 80px);  /* viewport height minus header/spacing */
-  overflow: auto;                  /* scroll when taller than viewport */
-  padding-right: 6px;              /* space for thin scrollbar */
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+  padding-right: 6px;
   margin-top: 0 !important;
   padding-top: 0 !important;
   scroll-behavior: smooth;
 }
 
-/* Nice thin scrollbar */
+/* Thin scrollbar */
 .author__profile::-webkit-scrollbar { width: 8px; }
 .author__profile::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,.25);
@@ -62,23 +60,22 @@
 .author__profile { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.25) transparent; }
 
 /* ===============================
-   Portrait card — 3:4, cover (no distortion)
+   Square portrait card
    =============================== */
 
 .author__profile .author__avatar {
   position: relative;
-  width: 300px;                    /* adjust 260–320px to taste */
-  aspect-ratio: 3 / 4;             /* portrait */
-  border-radius: 14px;
+  width: 280px;              /* tweak size */
+  aspect-ratio: 1 / 1;       /* square image */
+  border-radius: 12px;
   overflow: hidden;
   margin: 0 auto 1rem auto;
   background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,.06);
-  box-shadow: 0 8px 24px rgba(0,0,0,.16);
-  padding: 0 !important;           /* remove theme padding */
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  padding: 0 !important;
 }
 
-/* Image fills the card entirely */
 .author__profile .author__avatar img {
   position: absolute;
   inset: 0;
@@ -87,33 +84,17 @@
   max-width: none !important;
   max-height: none !important;
   object-fit: cover;
-  object-position: center top;     /* adjust framing if needed */
+  object-position: center;   /* centered crop */
   display: block;
   border-radius: 0;
   box-shadow: none;
 }
 
-/* Bio line-height (your 3-line title under the photo) */
+/* ===============================
+   Typography and content
+   =============================== */
+
 .author__bio { line-height: 1.35; }
-
-/* Responsive: sidebar becomes normal flow; no inner scroll on phones */
-@media (max-width: 768px) {
-  .sidebar { position: static; width: auto; }
-  .author__profile { max-height: none; overflow: visible; padding-right: 0; }
-  .author__profile .author__avatar { width: 220px; }
-}
-
-/* ===============================
-   Stack sections vertically (no leftover grid)
-   =============================== */
-
-.home-grid { display: block !important; }
-.home-main { margin: 0; }
-.home-aside { max-width: none; }
-
-/* ===============================
-   Paragraph/list justification
-   =============================== */
 
 .page__content p,
 .entry-content p,
@@ -128,7 +109,7 @@
   margin-bottom: 1rem;
 }
 
-/* Don’t justify headings */
+/* Headings stay left-aligned */
 .page__content h1,
 .page__content h2,
 .page__content h3,
@@ -139,7 +120,21 @@
 }
 
 /* ===============================
-   Remove blank gap under masthead (general)
+   Layout tweaks
+   =============================== */
+
+.home-grid { display: block !important; }
+.home-main { margin: 0; }
+.home-aside { max-width: none; }
+
+@media (max-width: 768px) {
+  .sidebar { position: static; width: auto; }
+  .author__profile { max-height: none; overflow: visible; padding-right: 0; }
+  .author__profile .author__avatar { width: 220px; }
+}
+
+/* ===============================
+   Remove blank gap under masthead
    =============================== */
 
 .masthead + .initial-content,
@@ -151,16 +146,15 @@
   padding-top: 0 !important;
 }
 
-/* Remove top margin from the very first element */
+/* No extra gap before first section */
 .page__content > :first-child { margin-top: 0 !important; }
 
-/* Keep About anchor snug if used */
+/* Keep #about snug */
 #about,
 #about h1 { margin-top: 0 !important; padding-top: 0 !important; }
 
 /* ===============================
-   Final gap fix for all layouts
-   (covers layout--home, --single, --default)
+   Final gap fix (covers all layouts)
    =============================== */
 
 .layout--home .page__inner,
@@ -170,7 +164,7 @@
   padding-top: 0 !important;
 }
 
-/* If there’s still a tiny leftover gap, nudge it closed */
+/* Optional: tiny adjustment if a sliver remains */
 .page__content > :first-child {
   margin-top: -8px !important;
 }
