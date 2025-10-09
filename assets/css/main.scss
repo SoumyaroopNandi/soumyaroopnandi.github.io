@@ -1,33 +1,47 @@
-/* ===== Home layout tweaks ===== */
+/* ===============================
+   Keep masthead full-width on top
+   =============================== */
 
-/* widen the whole content area a bit more on large screens */
-@media (min-width: 1200px) {
-  .page__inner { max-width: 1280px; }   /* was 1200 */
+/* Let the masthead span the full viewport width */
+.masthead,
+.masthead__inner {
+  max-width: none !important;   /* do not inherit content max-width */
 }
 
-/* layout for the two columns on Home */
+/* Constrain the nav *inside* the masthead and center it nicely */
+.masthead__inner .greedy-nav {
+  max-width: 1280px;            /* match/overshoot your .page__inner */
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-content: space-between; /* brand left, links right (default) */
+}
+
+/* Brand (site title) stays left; links align to the right edge of the nav area */
+.greedy-nav .site-title {
+  margin-right: 1.25rem;
+}
+
+/* ===============================
+   Home grid stays below the masthead
+   =============================== */
+
+/* Your two-column home layout (main + updates) */
 .home-grid {
   display: grid;
-  gap: 3rem;                             /* more gutter between columns */
-  grid-template-columns: 3fr 1.25fr;     /* give Welcome more space, push Updates right */
+  gap: 3rem;
+  grid-template-columns: minmax(0, 3fr) minmax(300px, 1.25fr);
 }
 
+/* Don’t let small screens try to keep two columns */
 @media (max-width: 991px) {
   .home-grid {
-    grid-template-columns: 1fr;          /* stack on small screens */
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .home-aside { position: static; }      /* no sticky on small screens */
+  .home-aside { position: static; }
 }
 
-/* keep the bigger headshot and small cosmetics (you already had these) */
-.author__avatar img { width: 220px; max-width: 100%; border-radius: 6px; }
-.home-aside h2 { margin-top: 0; }
-.home-aside ul { margin: 0; padding-left: 1.2rem; }
-.home-aside li { margin: 0 0 .4rem 0; }
-
-/* ==== Hide the “Recent Posts” section ONLY on the Home page ==== */
-.home-like .archive__subtitle,
-.home-like .entries {
-  display: none !important;
+/* Widen the content container a bit (optional) */
+@media (min-width: 1200px) {
+  .page__inner { max-width: 1280px; }
 }
