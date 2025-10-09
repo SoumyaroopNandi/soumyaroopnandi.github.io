@@ -4,8 +4,8 @@
 
 title: "Soumyaroop Nandi"
 description: "Generative AI • Computer Vision • Image Forensics"
-url: "https://soumyaroopnandi.github.io"   # GitHub Pages domain
-baseurl: ""                                 # Root of the site
+url: "https://soumyaroopnandi.github.io"     # GitHub Pages domain
+baseurl: ""                                   # Root of the site
 timezone: "America/Los_Angeles"
 
 # -----------------------------------------------------
@@ -17,7 +17,7 @@ repository: "SoumyaroopNandi/soumyaroopnandi.github.io"
 # Theme and Appearance
 # -----------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"   # Options: default, dark, air, contrast, neon, etc.
+minimal_mistakes_skin: "default"   # options: default, dark, air, contrast, neon, etc.
 
 # Use your own stylesheet (create /assets/css/main.scss)
 sass:
@@ -37,7 +37,7 @@ author:
       url: "mailto:soumyarn@usc.edu"
     - label: "Google Scholar"
       icon: "ai ai-google-scholar"
-      url: "https://https://scholar.google.com/citations?user=Xs3WlqQAAAAJ&hl=en"
+      url: "https://scholar.google.com/citations?user=Xs3WlqQAAAAJ&hl=en"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/SoumyaroopNandi"
@@ -46,7 +46,7 @@ author:
       url: "https://www.linkedin.com/in/soumyaroop-nandi-6a412967/"
     - label: "Twitter/X"
       icon: "fab fa-x-twitter"
-      url: "https://https://x.com/SoumyaroopNandi"
+      url: "https://x.com/SoumyaroopNandi"
     - label: "CV (PDF)"
       icon: "far fa-file-pdf"
       url: "/assets/cv/Soumyaroop_Nandi_CV.pdf"
@@ -99,7 +99,7 @@ scholar:
   order: descending
 
 # -----------------------------------------------------
-# Defaults
+# Defaults (no sidebar nav -> avoid duplicate menu)
 # -----------------------------------------------------
 defaults:
   - scope:
@@ -108,15 +108,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar:
-        nav: "main"
   - scope:
       path: "_pages"
     values:
       layout: single
       author_profile: true
-      sidebar:
-        nav: "main"
 
 # -----------------------------------------------------
 # HTML compression (optional)
@@ -127,7 +123,7 @@ compress_html:
   comments: ["<!-- ", " -->"]
 
 # -----------------------------------------------------
-# Excludes (speed up build / avoid noise)
+# Excludes
 # -----------------------------------------------------
 exclude:
   - node_modules
