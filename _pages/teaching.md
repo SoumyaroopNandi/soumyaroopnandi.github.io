@@ -8,7 +8,7 @@ author_profile: true
 # 🎓 Teaching Experience
 
 ## University of Southern California (USC), Los Angeles, CA  
-**Head Teaching Assistant** — *Aug 2019 – Present*  
+**Head Teaching Assistant** — *Aug 2019 – Dec 2025*  
 
 - Courses: **Introduction to Machine Learning (CSCI 467)**, **Machine Learning for Data Science (DSCI 552)** — 400+ students per term  
 - Supervised 20+ Ph.D. and Master’s TAs across multiple semesters  
@@ -22,7 +22,7 @@ author_profile: true
 ## University of Kansas (KU), Lawrence, KS  
 **Graduate Teaching Assistant** — *2014 – 2016*  
 
-- Departments: **Electrical Engineering & Computer Science (EECS)** and **Physics & Astronomy**  
+- Departments: **Electrical Engineering & Computer Science (EECS)** and **Physics & Astronomy Department**  
 - Courses:  
   - *Circuits & Electronics Lab (EECS 318)*  
   - *Random Signals & Noise (EECS 861)*  
