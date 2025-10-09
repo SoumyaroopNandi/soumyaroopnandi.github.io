@@ -102,3 +102,26 @@
     height: 200px;
   }
 }
+
+/* ===============================
+   Remove blank gap below masthead
+   =============================== */
+
+/* Trim excess padding/margin on top of the main content area */
+.page__content,
+.page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Also tighten the author-profile block spacing */
+.author__profile {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Optional: bring About-Me heading slightly closer to avatar */
+#about h1 {
+  margin-top: 0.5rem !important;
+}
+
