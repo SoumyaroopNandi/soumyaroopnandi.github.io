@@ -128,8 +128,7 @@ nav:
     url: /projects/
   - title: "Teaching"
     url: /teaching/
-  - title: "Contact"
-    url: /contact/
+
 
 # -----------------------------------------------------
 # HTML compression
