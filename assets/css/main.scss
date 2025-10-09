@@ -46,11 +46,56 @@
   .page__inner { max-width: 1280px; }
 }
 
-/* ===== Justify About Me text ===== */
-.home-main p {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.6;      /* improves readability */
-  margin-bottom: 1rem;   /* keeps spacing consistent */
+/* ===============================
+   Author photo — enlarge and center
+   =============================== */
+
+.author__avatar img {
+  width: 210px;           /* increased from default ~100px */
+  height: 210px;
+  border-radius: 8px;     /* slightly rounded corners */
+  object-fit: cover;      /* ensures the image doesn't distort */
+  display: block;
+  margin: 0 auto 1rem auto; /* center align and spacing below */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* soft shadow for depth */
 }
 
+/* Keep sidebar balanced with larger avatar */
+.sidebar {
+  width: 280px;
+}
+
+/* ===============================
+   Justify About Me text (Home page)
+   =============================== */
+
+.home-main p,
+.page__content p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Optional: justify list items and captions for consistency */
+.page__content li,
+.page__content figcaption {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Responsive tweaks
+   =============================== */
+
+/* On smaller screens, slightly reduce avatar size */
+@media (max-width: 768px) {
+  .author__avatar img {
+    width: 160px;
+    height: 160px;
+  }
+  .sidebar {
+    width: auto;
+  }
+}
