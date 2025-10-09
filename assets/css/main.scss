@@ -124,3 +124,23 @@ a:hover {
 
 .page__content > :first-child { margin-top: 0 !important; }
 #about { margin-top: 0 !important; padding-top: .01px; }
+
+/* Home: remove top band under masthead */
+.no-title .page__header,
+.no-title .page__title,
+.no-title .page__meta,
+.no-title .breadcrumbs { display: none !important; }
+
+.no-title .initial-content,
+.no-title .page__inner-wrap,
+.no-title .page__content,
+.no-title .page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 1px solid transparent !important; /* break margin-collapsing */
+}
+
+.no-title .page__content > :first-child { margin-top: 0 !important; }
+.no-title #about { margin-top: 0 !important; padding-top: .01px !important; }
+.no-title #about > h1 { margin-top: 0 !important; }
+
