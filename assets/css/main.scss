@@ -21,8 +21,6 @@
 }
 
 .greedy-nav .site-title { margin-right: 1.25rem; }
-
-/* Remove any default spacing under the masthead */
 .masthead { margin-bottom: 0 !important; }
 
 /* ===============================
@@ -34,49 +32,79 @@
 }
 
 /* ===============================
-   Sidebar portrait — 3:4 card, fill cover (no gaps)
+   AUTHOR SIDEBAR: sticky + scrollable
    =============================== */
 
-/* Card container defines size/shape/shadow */
+/* Make the whole left column stick under the header and scroll internally */
+.sidebar {
+  width: 320px;                    /* keep main content roomy */
+  position: sticky;
+  top: 64px;                       /* distance from top (≈ header height) */
+  align-self: flex-start;
+}
+
+/* The content inside the sidebar becomes the scroll container */
+.author__profile {
+  max-height: calc(100vh - 80px);  /* viewport height minus header/spacing */
+  overflow: auto;                  /* scroll when taller than viewport */
+  padding-right: 6px;              /* space for thin scrollbar */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  scroll-behavior: smooth;
+}
+
+/* Nice thin scrollbar */
+.author__profile::-webkit-scrollbar { width: 8px; }
+.author__profile::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.25);
+  border-radius: 4px;
+}
+.author__profile { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.25) transparent; }
+
+/* ===============================
+   Portrait card — 3:4, cover (no distortion)
+   =============================== */
+
 .author__profile .author__avatar {
-  position: relative;           /* needed for absolute child */
-  width: 300px;                 /* adjust 260–320px to taste */
-  aspect-ratio: 3 / 4;          /* portrait shape */
+  position: relative;
+  width: 300px;                    /* adjust 260–320px to taste */
+  aspect-ratio: 3 / 4;             /* portrait */
   border-radius: 14px;
   overflow: hidden;
-  margin: 0 auto 1.1rem auto;   /* center in sidebar */
+  margin: 0 auto 1rem auto;
   background: #f7f7f7;
   border: 1px solid rgba(0,0,0,.06);
   box-shadow: 0 8px 24px rgba(0,0,0,.16);
-  padding: 0 !important;        /* nuke theme padding */
+  padding: 0 !important;           /* remove theme padding */
 }
 
 /* Image fills the card entirely */
 .author__profile .author__avatar img {
   position: absolute;
-  inset: 0;                     /* top:0 right:0 bottom:0 left:0 */
+  inset: 0;
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: cover;            /* crop, don’t stretch */
-  object-position: center top;  /* tweak framing if needed */
+  object-fit: cover;
+  object-position: center top;     /* adjust framing if needed */
   display: block;
   border-radius: 0;
   box-shadow: none;
 }
 
-/* Keep sidebar width reasonable so main text has room */
-.sidebar { width: 320px; }
+/* Bio line-height (your 3-line title under the photo) */
+.author__bio { line-height: 1.35; }
 
-/* Responsive: smaller portrait on phones */
+/* Responsive: sidebar becomes normal flow; no inner scroll on phones */
 @media (max-width: 768px) {
-  .author__profile .author__avatar { width: 200px; }
-  .sidebar { width: auto; }
+  .sidebar { position: static; width: auto; }
+  .author__profile { max-height: none; overflow: visible; padding-right: 0; }
+  .author__profile .author__avatar { width: 220px; }
 }
 
 /* ===============================
-   Stack sections vertically
+   Stack sections vertically (no leftover grid)
    =============================== */
 
 .home-grid { display: block !important; }
@@ -114,7 +142,6 @@
    Remove blank gap under masthead
    =============================== */
 
-/* Theme wrappers sometimes add top spacing; zero them all. */
 .masthead + .initial-content,
 .initial-content,
 .page,
@@ -124,20 +151,15 @@
   padding-top: 0 !important;
 }
 
-/* Remove top margin from the first visible element in content */
-.page__content > :first-child {
-  margin-top: 0 !important;
-}
+/* Remove top margin from the very first element */
+.page__content > :first-child { margin-top: 0 !important; }
 
-/* Tighten author profile wrapper spacing */
-.author__profile {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+/* Optional: if you use an #about anchor, keep it snug */
+#about h1 { margin-top: 0 !important; }
 
 /* ===============================
-   (Optional) Hide brand label at far left and left-align links
-   Uncomment if you don't want the brand text.
+   (Optional) Hide brand label & left-align links
+   Uncomment if you want no brand text at far left.
    =============================== */
 /*
 .masthead .site-title { display: none !important; }
