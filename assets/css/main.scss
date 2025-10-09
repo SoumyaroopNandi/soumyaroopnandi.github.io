@@ -109,3 +109,18 @@ a:hover {
     padding-right: 0;
   }
 }
+
+/* Remove the invisible page header and extra top spacing on home */
+.page__header,
+.page__meta { display: none !important; }
+
+.page__inner-wrap,
+.page__content,
+.initial-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 1px solid transparent !important; /* break margin collapsing */
+}
+
+.page__content > :first-child { margin-top: 0 !important; }
+#about { margin-top: 0 !important; padding-top: .01px; }
