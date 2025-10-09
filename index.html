@@ -1,16 +1,39 @@
 ---
-layout: home
-author_profile: true
+layout: single
 title: "Soumyaroop Nandi"
-excerpt: "Generative AI • Computer Vision • Image Forensics"
+permalink: /
+author_profile: true         # left author card (avatar + links)
+classes: "home-like"
+sidebar:
+  nav: "main"
 ---
 
-<section>
-  <h2>Highlights</h2>
-  <ul>
-    <li>Ph.D. Computer Science, University of Southern California (USC)</li>
-    <li>Thesis: Context-Aware Semantic Forgery Detection in Biomedical and Natural Images.</li>
-    <li>PhD Advisor: Dr. Prem Natarajan</li>
-    <li>Interests: SSMs, VLMs, Diffusion Models, GANs, Representation Learning.</li>
-  </ul>
-</section>
+<div class="home-grid">
+  <div class="home-main">
+    <h1>Welcome!</h1>
+
+    <p>
+      I'm a Computer Science PhD (USC). My work is on <strong>AI, Computer Vision, and Image Forensics</strong> —
+      developing state-space and information-theoretic models for detecting generative image forgeries.
+    </p>
+
+    <ul>
+      <li>Ph.D. (USC): Context-Aware Semantic Forgery Detection for biomedical and natural images.</li>
+      <li>Interests: SSMs, VLMs, Diffusion Models, GANs, Representation Learning.</li>
+    </ul>
+
+    <h2>Research Interests</h2>
+    <p>
+      I’m broadly interested in understanding how complex, high-dimensional vision systems behave and how to model,
+      analyze, and intervene in their internal causal pathways. I focus on generative models and representation learning.
+    </p>
+  </div>
+
+  <aside class="home-aside">
+    <h2>Recent updates!</h2>
+    {% comment %}
+    You can edit these quickly in _data/updates.yml (see step 3) and this include will render them.
+    {% endcomment %}
+    {% include updates.html limit=8 %}
+  </aside>
+</div>
