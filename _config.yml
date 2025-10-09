@@ -2,7 +2,7 @@
 #  Site Configuration for Soumyaroop Nandi’s Website
 # =====================================================
 
-title: "Home"
+title: ""
 description: "Generative AI • Computer Vision • Image Forensics"
 url: "https://soumyaroopnandi.github.io"     # GitHub Pages domain
 baseurl: ""                                   # Root of the site
