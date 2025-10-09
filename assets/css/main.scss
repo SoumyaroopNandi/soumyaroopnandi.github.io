@@ -1,42 +1,33 @@
-/* ===== keep your imports already present =====
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
-*/
+/* ===== Home layout tweaks ===== */
 
-/* --- Reduce base font size slightly (scales headings too) --- */
-html { font-size: 15.5px; }       /* default ~16–18px; this dials it down a bit */
-
-/* --- Make the content area a touch wider on big screens --- */
+/* widen the whole content area a bit more on large screens */
 @media (min-width: 1200px) {
-  .page__inner { max-width: 1200px; }  /* default ~1100px */
+  .page__inner { max-width: 1280px; }   /* was 1200 */
 }
 
-/* --- Home page specific adjustments --- */
-.home-like .page__title { display: none; }   /* hide giant page title on Home */
-.home-like .author__name { display: none; }  /* hide name under the avatar */
-
-/* keep the “recent updates” two-column layout you have */
+/* layout for the two columns on Home */
 .home-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr; /* mobile */
-}
-@media (min-width: 992px) {
-  .home-grid {
-    grid-template-columns: 2fr 1fr; /* main + aside */
-    align-items: start;
-  }
-  .home-aside { position: sticky; top: 2rem; }
+  gap: 3rem;                             /* more gutter between columns */
+  grid-template-columns: 3fr 1.25fr;     /* give Welcome more space, push Updates right */
 }
 
-/* Tidy the aside a bit */
+@media (max-width: 991px) {
+  .home-grid {
+    grid-template-columns: 1fr;          /* stack on small screens */
+    gap: 2rem;
+  }
+  .home-aside { position: static; }      /* no sticky on small screens */
+}
+
+/* keep the bigger headshot and small cosmetics (you already had these) */
+.author__avatar img { width: 220px; max-width: 100%; border-radius: 6px; }
 .home-aside h2 { margin-top: 0; }
 .home-aside ul { margin: 0; padding-left: 1.2rem; }
 .home-aside li { margin: 0 0 .4rem 0; }
 
-/* Keep your larger headshot */
-.author__avatar img {
-  width: 220px;
-  max-width: 100%;
-  border-radius: 6px;
+/* ==== Hide the “Recent Posts” section ONLY on the Home page ==== */
+.home-like .archive__subtitle,
+.home-like .entries {
+  display: none !important;
 }
