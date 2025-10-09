@@ -22,6 +22,9 @@
 
 .greedy-nav .site-title { margin-right: 1.25rem; }
 
+/* Remove any default spacing under the masthead */
+.masthead { margin-bottom: 0 !important; }
+
 /* ===============================
    Page container width
    =============================== */
@@ -31,46 +34,49 @@
 }
 
 /* ===============================
-   Sidebar portrait — 3:4 card (no distortion)
+   Sidebar portrait — 3:4 card, fill cover (no gaps)
    =============================== */
 
-/* Card container defines size, rounding, and shadow */
+/* Card container defines size/shape/shadow */
 .author__profile .author__avatar {
-  width: 300px;                /* adjust 260–320px to taste */
-  aspect-ratio: 3 / 4;         /* portrait shape */
+  position: relative;           /* needed for absolute child */
+  width: 300px;                 /* adjust 260–320px to taste */
+  aspect-ratio: 3 / 4;          /* portrait shape */
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,.16);
-  margin: 0 auto 1.1rem auto;  /* center in sidebar */
+  margin: 0 auto 1.1rem auto;   /* center in sidebar */
   background: #f7f7f7;
   border: 1px solid rgba(0,0,0,.06);
-  padding: 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.16);
+  padding: 0 !important;        /* nuke theme padding */
 }
 
-/* Image fills the card without stretching (override theme caps) */
+/* Image fills the card entirely */
 .author__profile .author__avatar img {
+  position: absolute;
+  inset: 0;                     /* top:0 right:0 bottom:0 left:0 */
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
+  object-fit: cover;            /* crop, don’t stretch */
+  object-position: center top;  /* tweak framing if needed */
   display: block;
-  object-fit: cover;            /* crop gracefully to the card */
-  object-position: center top;  /* tweak if you want more headroom */
   border-radius: 0;
   box-shadow: none;
 }
 
-/* Keep sidebar reasonable so main text retains width */
+/* Keep sidebar width reasonable so main text has room */
 .sidebar { width: 320px; }
 
 /* Responsive: smaller portrait on phones */
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .author__profile .author__avatar { width: 200px; }
   .sidebar { width: auto; }
 }
 
 /* ===============================
-   Stack “About” and “Updates” vertically
+   Stack sections vertically
    =============================== */
 
 .home-grid { display: block !important; }
@@ -108,29 +114,30 @@
    Remove blank gap under masthead
    =============================== */
 
-/* Nuke top spacing on all relevant wrappers */
-.masthead + .initial-content { margin-top: 0 !important; padding-top: 0 !important; }
-.initial-content { margin-top: 0 !important; padding-top: 0 !important; }
-.page__inner     { margin-top: 0 !important; padding-top: 0 !important; }
+/* Theme wrappers sometimes add top spacing; zero them all. */
+.masthead + .initial-content,
+.initial-content,
 .page,
-.page__content   { margin-top: 0 !important; padding-top: 0 !important; }
+.page__inner,
+.page__content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 
-/* Kill any top margin on the first heading */
-.layout--single .page__content > h1:first-child,
-.layout--single .page__content > .archive > h1:first-child,
-#about h1 {
+/* Remove top margin from the first visible element in content */
+.page__content > :first-child {
   margin-top: 0 !important;
 }
 
-/* Also tighten the author profile wrapper spacing */
+/* Tighten author profile wrapper spacing */
 .author__profile {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
 /* ===============================
-   (Optional) Hide brand text & left-align links
-   Uncomment if you want to hide the brand label on the far left.
+   (Optional) Hide brand label at far left and left-align links
+   Uncomment if you don't want the brand text.
    =============================== */
 /*
 .masthead .site-title { display: none !important; }
