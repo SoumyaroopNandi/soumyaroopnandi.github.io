@@ -1,26 +1,49 @@
 ---
-title: "Publications"
+title: ""
 permalink: /publications/
 layout: single
 author_profile: true
 ---
 
-# 📚 Publications
+# 🎓 Publications during PhD at University of Southern California
 
-Below is a BibTeX-driven list automatically generated from [`_bib/publications.bib`](https://github.com/SoumyaroopNandi/soumyaroopnandi.github.io/tree/main/_bib).  
-To add new publications, simply edit that file and commit — the page will update upon redeployment.
+- **Nandi, S.**, Natarajan, P., & Abd-Almageed, W. (2023).  
+  **TrainFors: A Large Benchmark Training Dataset for Image Manipulation Detection and Localization.**  
+  *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 403–414.  
+  [PDF](https://openaccess.thecvf.com/content/ICCV2023W/DFAD/papers/Nandi_TrainFors_A_Large_Benchmark_Training_Dataset_for_Image_Manipulation_Detection_ICCVW_2023_paper.pdf)
+
+- Sabir, E., **Nandi, S.**, AbdAlmageed, W., & Natarajan, P. (2022).  
+  **MONet: Multi-Scale Overlap Network for Duplication Detection in Biomedical Images.**  
+  *IEEE International Conference on Image Processing (ICIP)*, 3793–3797.  
+  [PDF](https://arxiv.org/pdf/2207.09107)
+
+- Sabir, E., **Nandi, S.**, Abd-Almageed, W., & Natarajan, P. (2021).  
+  **BioFors: A Large Biomedical Image Forensics Dataset.**  
+  *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 10963–10973.  
+  [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Sabir_BioFors_A_Large_Biomedical_Image_Forensics_Dataset_ICCV_2021_paper.pdf)
+
+- Cheng, J., **Nandi, S.**, Natarajan, P., & Abd-Almageed, W. (2021).  
+  **SIGN: Spatial-Information Incorporated Generative Network for Generalized Zero-Shot Semantic Segmentation.**  
+  *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 9556–9566.  
+  [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Cheng_SIGN_Spatial-Information_Incorporated_Generative_Network_for_Generalized_Zero-Shot_Semantic_Segmentation_ICCV_2021_paper.pdf)
 
 ---
 
-## 🧠 Featured Works
+# 🎓 Publications during MS at University of Kansas
 
-- Sabir, E., Nandi, S., Abd-Almageed, W., & Natarajan, P. (2021).  
-  **BioFors: A Large Biomedical Image Forensics Dataset.**  
-  *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 10963–10973.
+- **Nandi, S.** (2017).  
+  *Robust Object Tracking and Adaptive Detection for Auto Navigation of Unmanned Aerial Vehicle.*  
+  Master’s Thesis, University of Kansas.  
+  [Thesis PDF](https://kuscholarworks.ku.edu/entities/publication/f6aa75d9-cbcc-47a4-b6ef-545c704740e5)
 
-- Sabir, E., Nandi, S., AbdAlmageed, W., & Natarajan, P. (2022).  
-  **MONet: Multi-Scale Overlap Network for Duplication Detection in Biomedical Images.**  
-  *IEEE International Conference on Image Processing (ICIP)*, 3793–3797.
+- Bharati, S. P., **Nandi, S.**, Wu, Y., Sui, Y., & Wang, G. (2016).  
+  **Fast and Robust Object Tracking with Adaptive Detection.**  
+  *IEEE 28th International Conference on Tools with Artificial Intelligence (ICTAI)*, 706–713.
+
+- MacGregor, J. A., Li, J., Paden, J. D., Catania, G. A., Clow, G. D., Fahnestock, M. A., Gogineni, S. P., Grimm, R. E., Morlighem, M., **Nandi, S.**, *et al.* (2015).  
+  **Radar Attenuation and Temperature Within the Greenland Ice Sheet.**  
+  *Journal of Geophysical Research: Earth Surface*, 120(6), 983–1008.  
+  [DOI: 10.1002/2014JF003418](https://doi.org/10.1002/2014JF003418)
 
 ---
 
