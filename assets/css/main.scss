@@ -7,7 +7,7 @@
 @import "minimal-mistakes";
 
 /* ===============================
-   Masthead full-width (nav bar)
+   Masthead full-width (navigation)
    =============================== */
 
 .masthead,
@@ -32,16 +32,15 @@
 }
 
 /* ===============================
-   AUTHOR SIDEBAR (scrollable)
+   SIDEBAR (scrollable + square avatar)
    =============================== */
 
-/* Whole sidebar column: sticks under the nav, scrolls internally */
 .sidebar {
   width: 320px;
   position: sticky;
-  top: 64px; /* ≈ header height */
+  top: 64px; /* ~ header height */
   align-self: flex-start;
-  height: calc(100vh - 64px); /* fill viewport below header */
+  height: calc(100vh - 64px);
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -49,27 +48,23 @@
   padding-right: 6px;
 }
 
-/* Thin scrollbar (for WebKit browsers) */
+/* Custom thin scrollbar for WebKit browsers */
 .sidebar::-webkit-scrollbar { width: 8px; }
 .sidebar::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,.25);
   border-radius: 4px;
 }
 
-/* Inner content (author profile) */
 .author__profile {
   margin: 0;
   padding: 0 0.5rem;
 }
 
-/* ===============================
-   Square avatar card
-   =============================== */
-
+/* Square portrait card */
 .author__profile .author__avatar {
   position: relative;
   width: 280px;
-  aspect-ratio: 1 / 1; /* square */
+  aspect-ratio: 1 / 1; /* perfect square */
   border-radius: 12px;
   overflow: hidden;
   margin: 0 auto 1rem auto;
@@ -91,16 +86,9 @@
   box-shadow: none;
 }
 
-/* ===============================
-   Author text styling
-   =============================== */
-
 .author__bio { line-height: 1.35; }
 
-/* ===============================
-   Responsive sidebar collapse
-   =============================== */
-
+/* Responsive: sidebar collapses under header on small screens */
 @media (max-width: 768px) {
   .sidebar {
     position: static;
@@ -113,7 +101,7 @@
 }
 
 /* ===============================
-   Paragraph/list justification
+   Paragraph and heading formatting
    =============================== */
 
 .page__content p,
@@ -128,7 +116,7 @@
   margin-bottom: 1rem;
 }
 
-/* Headings stay left-aligned */
+/* Keep headings left-aligned */
 .page__content h1,
 .page__content h2,
 .page__content h3,
@@ -139,7 +127,7 @@
 }
 
 /* ===============================
-   Remove blank gap below nav bar
+   Remove blank gap below masthead
    =============================== */
 
 .masthead + .initial-content,
@@ -151,13 +139,13 @@
   padding-top: 0 !important;
 }
 
-/* Remove margin above first section */
+/* Ensure the first visible element doesn't push content down */
 .page__content > :first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* If there's still minimal white gap, close it fully */
+/* Layout-level reset */
 .layout--home .page__inner,
 .layout--single .page__inner,
 .layout--default .page__inner {
@@ -165,12 +153,41 @@
   padding-top: 0 !important;
 }
 
-/* Optional micro adjustment (only if a thin white line remains) */
-.page__content > :first-child { margin-top: -8px !important; }
+/* ===============================
+   FINAL no-gap fix (stop margin collapsing)
+   =============================== */
 
-/* Keep #about anchor snug */
-#about,
-#about h1 {
+.page__content {
+  border-top: 1px solid transparent !important; /* breaks margin collapse */
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+.page__title,
+.page__lead {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Zero margin for first visible element */
+.page__content > :is(h1, h2, h3, h4, h5, h6, p, div):first-child {
+  margin-top: 0 !important;
+}
+
+/* Handle #about anchor (if used) */
+#about {
+  margin-top: 0 !important;
+  padding-top: 0.01px; /* breaks collapse invisibly */
+}
+
+/* Optional micro adjustment */
+.page__content > :first-child {
+  margin-top: -4px !important;
+}
+
+/* ===============================
+   Optional polish: smooth scrolling
+   =============================== */
+html {
+  scroll-behavior: smooth;
 }
