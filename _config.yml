@@ -17,7 +17,7 @@ repository: "SoumyaroopNandi/soumyaroopnandi.github.io"
 # Theme and Appearance
 # -----------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"   # options: default, dark, air, contrast, neon, etc.
+minimal_mistakes_skin: "default"
 
 # Use your own stylesheet (create /assets/css/main.scss)
 sass:
@@ -99,7 +99,7 @@ scholar:
   order: descending
 
 # -----------------------------------------------------
-# Defaults (no sidebar nav -> avoid duplicate menu)
+# Defaults (remove sidebar nav to avoid duplicate menu)
 # -----------------------------------------------------
 defaults:
   - scope:
@@ -115,7 +115,24 @@ defaults:
       author_profile: true
 
 # -----------------------------------------------------
-# HTML compression (optional)
+# Navigation (custom top navbar)
+# -----------------------------------------------------
+nav:
+  - title: "Home"
+    url: /
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Projects"
+    url: /projects/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "Contact"
+    url: /contact/
+
+# -----------------------------------------------------
+# HTML compression
 # -----------------------------------------------------
 compress_html:
   clippings: all
