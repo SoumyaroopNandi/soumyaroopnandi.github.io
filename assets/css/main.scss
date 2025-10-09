@@ -7,7 +7,7 @@
 @import "minimal-mistakes";
 
 /* ===============================
-   Keep masthead full-width on top
+   Masthead full-width
    =============================== */
 
 .masthead,
@@ -23,7 +23,7 @@
 .greedy-nav .site-title { margin-right: 1.25rem; }
 
 /* ===============================
-   Layout container width
+   Page container width
    =============================== */
 
 @media (min-width: 1200px) {
@@ -31,89 +31,74 @@
 }
 
 /* ===============================
-   Author photo (sidebar)
+   Sidebar avatar (large, centered)
    =============================== */
 
 .author__avatar img {
-  width: 300px;          /* sweet spot: big but not overwhelming */
-  height: 300px;
+  width: 320px;         /* large but layout-safe */
+  height: 320px;
   border-radius: 12px;
   object-fit: cover;
   display: block;
   margin: 0 auto 1.25rem auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,.20);
 }
 
-/* Keep sidebar balanced with the larger avatar */
-.sidebar { width: 320px; }  /* do NOT exceed ~340px or the center gets cramped */
+/* Sidebar width tuned for big avatar */
+.sidebar { width: 340px; }
 
 /* ===============================
-   Home grid (About + Recent Updates)
+   Home sections stacked vertically
+   (About Me full-width, then Updates full-width)
    =============================== */
 
-.home-grid {
-  display: grid;
-  gap: 2.5rem;
-  /* Main content fluid, Updates fixed width so it doesn't steal space */
-  grid-template-columns: minmax(0, 1fr) 340px;
-}
+/* Neutralize any older grid rules */
+.home-grid { display: block !important; }
+.home-main { margin: 0; }
+.home-aside { max-width: none; }
 
-/* Make the updates column a bit tighter */
-.home-aside { max-width: 340px; }
-
-.home-aside ul,
-.home-aside li,
-.home-aside p {
-  font-size: 0.98rem;
-  line-height: 1.5;
-}
-
-/* Larger screens can afford a slightly wider updates rail */
-@media (min-width: 1400px) {
-  .home-grid { grid-template-columns: minmax(0, 1fr) 360px; }
-  .home-aside { max-width: 360px; }
-}
-
-/* Collapse to one column on small screens */
-@media (max-width: 991px) {
-  .home-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .home-aside { position: static; max-width: none; }
-}
+/* Headings spacing in main content */
+.page__content > h1,
+.page__content > h2 { margin-top: 0.25rem; }
 
 /* ===============================
-   Justify text in About section
+   Paragraph/list justification
    =============================== */
 
-.home .page__content p,
-.page-home .page__content p,
 .page__content p,
+.entry-content p,
 .home-main p,
-.entry-content p {
+.page__content li,
+.entry-content li,
+.page__content figcaption,
+.entry-content figcaption {
   text-align: justify !important;
   text-justify: inter-word;
   line-height: 1.75;
   margin-bottom: 1rem;
 }
 
-/* Avoid justifying headings */
+/* Don’t justify headings */
 .page__content h1,
 .page__content h2,
 .page__content h3,
 .page__content h4,
 .page__content h5,
-.page__content h6 { text-align: left !important; }
+.page__content h6 {
+  text-align: left !important;
+}
 
 /* ===============================
-   Responsive tweaks for avatar
+   Responsive tweaks
    =============================== */
+
+@media (max-width: 991px) {
+  .sidebar { width: auto; }
+}
 
 @media (max-width: 768px) {
   .author__avatar img {
     width: 200px;
     height: 200px;
   }
-  .sidebar { width: auto; }
 }
