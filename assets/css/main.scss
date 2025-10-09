@@ -31,33 +31,52 @@
 }
 
 /* ===============================
-   Sidebar avatar (large, centered)
+   Sidebar portrait — 3:4 card, no distortion
    =============================== */
 
-.author__avatar img {
-  width: 320px;         /* large but layout-safe */
-  height: 320px;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 1.25rem auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,.20);
+/* Card container controls shape and shadow */
+.author__avatar {
+  width: 280px;                 /* adjust 260–300px as you like */
+  aspect-ratio: 3 / 4;          /* portrait */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.16);
+  margin: 0 auto 1.25rem auto;  /* center in sidebar */
+  background: #f7f7f7;
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 0;                   /* ensure no inner padding */
 }
 
-/* Sidebar width tuned for big avatar */
-.sidebar { width: 340px; }
+/* Image fills the card without stretching */
+.author__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* crop to the card nicely */
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Sidebar width tuned for portrait; don't oversize or center column will shrink */
+.sidebar { width: 320px; }
+
+/* Responsive portrait size */
+@media (max-width: 768px) {
+  .author__avatar { width: 200px; }
+  .sidebar { width: auto; }
+}
 
 /* ===============================
    Home sections stacked vertically
    (About Me full-width, then Updates full-width)
    =============================== */
 
-/* Neutralize any older grid rules */
+/* Neutralize any old grid rules */
 .home-grid { display: block !important; }
 .home-main { margin: 0; }
 .home-aside { max-width: none; }
 
-/* Headings spacing in main content */
+/* Headings spacing */
 .page__content > h1,
 .page__content > h2 { margin-top: 0.25rem; }
 
@@ -89,39 +108,19 @@
 }
 
 /* ===============================
-   Responsive tweaks
-   =============================== */
-
-@media (max-width: 991px) {
-  .sidebar { width: auto; }
-}
-
-@media (max-width: 768px) {
-  .author__avatar img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-/* ===============================
    Remove blank gap below masthead
    =============================== */
 
-/* Trim excess padding/margin on top of the main content area */
 .page__content,
 .page {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Also tighten the author-profile block spacing */
 .author__profile {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Optional: bring About-Me heading slightly closer to avatar */
-#about h1 {
-  margin-top: 0.5rem !important;
-}
-
+/* Optional: bring About-Me heading closer if you use #about */
+#about h1 { margin-top: 0.5rem !important; }
