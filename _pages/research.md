@@ -7,7 +7,7 @@ My research centers on advancing the integrity, authenticity, and trustworthines
 
 At its core, my work reformulates IMDL as a structured reasoning problem—modeling source–target relationships, semantic consistency, and information flow between real and synthetic regions. By bridging generative modeling, forensic detection, and semantic understanding, my research enables both the creation and detection of realistic manipulations guided by language or diffusion-based synthesis. This dual perspective—combining generation and detection—lays the groundwork for standardized, explainable, and trustworthy visual forensics that generalize beyond specific datasets, manipulation types, or domains.
 
-### Research Interestsover
+### Research Interests
 
 - Scientific Integrity in Biomedical Publications
 - Natural Image Manipulation Detection and Localization
