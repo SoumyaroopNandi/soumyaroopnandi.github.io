@@ -2,192 +2,53 @@
 # Only the main Sass file needs front matter for Jekyll to build it
 ---
 
-/* Load Minimal Mistakes skin + base */
+/* Minimal Mistakes base */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* ===============================
-   Masthead full-width (navigation)
-   =============================== */
-
+/* ===== Masthead: no extra space below ===== */
+.masthead { margin-bottom: 0 !important; }
 .masthead,
 .masthead__inner { max-width: none !important; }
 
-.masthead__inner .greedy-nav {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  justify-content: space-between;
+/* ===== Sidebar: sticky + scrollable column ===== */
+.sidebar{
+  width:320px;
+  position:sticky; top:64px;      /* ≈ header height */
+  height:calc(100vh - 64px);
+  align-self:flex-start;
+  overflow-y:auto; overflow-x:hidden;
+  padding-right:6px;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(0,0,0,.25) transparent;
+}
+.sidebar::-webkit-scrollbar{ width:8px; }
+.sidebar::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.25); border-radius:4px; }
+
+@media (max-width:768px){
+  .sidebar{ position:static; width:auto; height:auto; overflow:visible; padding-right:0; }
 }
 
-.greedy-nav .site-title { margin-right: 1.25rem; }
-.masthead { margin-bottom: 0 !important; }
-
-/* ===============================
-   Page container width
-   =============================== */
-
-@media (min-width: 1200px) {
-  .page__inner { max-width: 1280px; }
+/* ===== Square avatar ===== */
+.author__profile{ margin:0; padding:0 .5rem; }
+.author__profile .author__avatar{
+  position:relative; width:280px; aspect-ratio:1/1;
+  border-radius:12px; overflow:hidden; margin:0 auto 1rem;
+  background:#f7f7f7; border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  padding:0 !important;
+}
+.author__profile .author__avatar img{
+  position:absolute; inset:0; width:100% !important; height:100% !important;
+  object-fit:cover; object-position:center; display:block; border-radius:0; box-shadow:none;
 }
 
-/* ===============================
-   SIDEBAR (scrollable + square avatar)
-   =============================== */
-
-.sidebar {
-  width: 320px;
-  position: sticky;
-  top: 64px; /* ~ header height */
-  align-self: flex-start;
-  height: calc(100vh - 64px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0,0,0,.25) transparent;
-  padding-right: 6px;
+/* ===== REAL no-gap fix under nav (prevents margin-collapsing) ===== */
+.initial-content{ margin-top:0 !important; padding-top:0 !important; }
+.page__content{
+  margin-top:0 !important; padding-top:0 !important;
+  border-top:1px solid transparent !important;  /* breaks margin-collapsing */
 }
-
-/* Custom thin scrollbar for WebKit browsers */
-.sidebar::-webkit-scrollbar { width: 8px; }
-.sidebar::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,.25);
-  border-radius: 4px;
-}
-
-.author__profile {
-  margin: 0;
-  padding: 0 0.5rem;
-}
-
-/* Square portrait card */
-.author__profile .author__avatar {
-  position: relative;
-  width: 280px;
-  aspect-ratio: 1 / 1; /* perfect square */
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 0 auto 1rem auto;
-  background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,.15);
-  padding: 0 !important;
-}
-
-.author__profile .author__avatar img {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.author__bio { line-height: 1.35; }
-
-/* Responsive: sidebar collapses under header on small screens */
-@media (max-width: 768px) {
-  .sidebar {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    padding-right: 0;
-  }
-  .author__profile .author__avatar { width: 220px; }
-}
-
-/* ===============================
-   Paragraph and heading formatting
-   =============================== */
-
-.page__content p,
-.entry-content p,
-.page__content li,
-.entry-content li,
-.page__content figcaption,
-.entry-content figcaption {
-  text-align: justify !important;
-  text-justify: inter-word;
-  line-height: 1.75;
-  margin-bottom: 1rem;
-}
-
-/* Keep headings left-aligned */
-.page__content h1,
-.page__content h2,
-.page__content h3,
-.page__content h4,
-.page__content h5,
-.page__content h6 {
-  text-align: left !important;
-}
-
-/* ===============================
-   Remove blank gap below masthead
-   =============================== */
-
-.masthead + .initial-content,
-.initial-content,
-.page,
-.page__inner,
-.page__content {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Ensure the first visible element doesn't push content down */
-.page__content > :first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Layout-level reset */
-.layout--home .page__inner,
-.layout--single .page__inner,
-.layout--default .page__inner {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* ===============================
-   FINAL no-gap fix (stop margin collapsing)
-   =============================== */
-
-.page__content {
-  border-top: 1px solid transparent !important; /* breaks margin collapse */
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.page__title,
-.page__lead {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Zero margin for first visible element */
-.page__content > :is(h1, h2, h3, h4, h5, h6, p, div):first-child {
-  margin-top: 0 !important;
-}
-
-/* Handle #about anchor (if used) */
-#about {
-  margin-top: 0 !important;
-  padding-top: 0.01px; /* breaks collapse invisibly */
-}
-
-/* Optional micro adjustment */
-.page__content > :first-child {
-  margin-top: -4px !important;
-}
-
-/* ===============================
-   Optional polish: smooth scrolling
-   =============================== */
-html {
-  scroll-behavior: smooth;
-}
+.page__title, .page__lead{ margin-top:0 !important; padding-top:0 !important; }
+.page__content > :first-child{ margin-top:0 !important; }
+#about{ margin-top:0 !important; padding-top:.01px; } /* if an anchor precedes the H1 */
