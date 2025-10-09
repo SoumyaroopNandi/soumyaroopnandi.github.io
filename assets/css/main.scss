@@ -10,124 +10,110 @@
    Keep masthead full-width on top
    =============================== */
 
-/* Let the masthead span the full viewport width */
 .masthead,
-.masthead__inner {
-  max-width: none !important;   /* do not inherit content max-width */
-}
+.masthead__inner { max-width: none !important; }
 
-/* Constrain the nav *inside* the masthead and center it nicely */
 .masthead__inner .greedy-nav {
-  max-width: 1280px;            /* match/overshoot your .page__inner */
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
-  justify-content: space-between; /* brand left, links right (default) */
+  justify-content: space-between;
 }
 
-/* Brand (site title) stays left; links align to the right edge of the nav area */
-.greedy-nav .site-title {
-  margin-right: 1.25rem;
-}
+.greedy-nav .site-title { margin-right: 1.25rem; }
 
 /* ===============================
-   Home grid stays below the masthead
+   Layout container width
    =============================== */
 
-/* Your two-column home layout (main + updates) */
-.home-grid {
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: minmax(0, 3fr) minmax(300px, 1.25fr);
-}
-
-/* Don’t let small screens try to keep two columns */
-@media (max-width: 991px) {
-  .home-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .home-aside { position: static; }
-}
-
-/* Widen the content container a bit (optional) */
 @media (min-width: 1200px) {
   .page__inner { max-width: 1280px; }
 }
 
 /* ===============================
-   Author photo — enlarge and center
+   Author photo (sidebar)
    =============================== */
 
 .author__avatar img {
-  width: 460px;           /* increased from 210px */
-  height: 460px;
-  border-radius: 10px;    /* keeps rectangular with slight rounding */
+  width: 300px;          /* sweet spot: big but not overwhelming */
+  height: 300px;
+  border-radius: 12px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 1.25rem auto;  /* centered with a bit more spacing below */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* slightly deeper shadow */
+  margin: 0 auto 1.25rem auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,.2);
 }
 
-/* Keep sidebar balanced with larger avatar */
-.sidebar {
-  width: 500px;           /* widen sidebar to fit larger image */
-}
-
+/* Keep sidebar balanced with the larger avatar */
+.sidebar { width: 320px; }  /* do NOT exceed ~340px or the center gets cramped */
 
 /* ===============================
-   Force justified text on Home/About
-   (increase specificity + !important)
+   Home grid (About + Recent Updates)
    =============================== */
 
-/* Typical page/article body */
+.home-grid {
+  display: grid;
+  gap: 2.5rem;
+  /* Main content fluid, Updates fixed width so it doesn't steal space */
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+/* Make the updates column a bit tighter */
+.home-aside { max-width: 340px; }
+
+.home-aside ul,
+.home-aside li,
+.home-aside p {
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* Larger screens can afford a slightly wider updates rail */
+@media (min-width: 1400px) {
+  .home-grid { grid-template-columns: minmax(0, 1fr) 360px; }
+  .home-aside { max-width: 360px; }
+}
+
+/* Collapse to one column on small screens */
+@media (max-width: 991px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .home-aside { position: static; max-width: none; }
+}
+
+/* ===============================
+   Justify text in About section
+   =============================== */
+
 .home .page__content p,
 .page-home .page__content p,
-.page__content p {
+.page__content p,
+.home-main p,
+.entry-content p {
   text-align: justify !important;
   text-justify: inter-word;
   line-height: 1.75;
   margin-bottom: 1rem;
 }
 
-/* Common extra containers used by Minimal Mistakes */
-.home .entry-content p,
-.entry-content p,
-.page__content li,
-.entry-content li,
-.page__content figcaption,
-.entry-content figcaption {
-  text-align: justify !important;
-  text-justify: inter-word;
-  line-height: 1.65;
-}
-
-/* If you used a custom wrapper like .home-main from your markup */
-.home-main p {
-  text-align: justify !important;
-  text-justify: inter-word;
-  line-height: 1.7;
-}
-
-/* Optional: avoid justifying headings */
+/* Avoid justifying headings */
 .page__content h1,
 .page__content h2,
 .page__content h3,
 .page__content h4,
 .page__content h5,
-.page__content h6 {
-  text-align: left !important;
-}
+.page__content h6 { text-align: left !important; }
 
 /* ===============================
-   Responsive tweaks
+   Responsive tweaks for avatar
    =============================== */
 
 @media (max-width: 768px) {
   .author__avatar img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
   }
-  .sidebar {
-    width: auto;
-  }
+  .sidebar { width: auto; }
 }
