@@ -35,9 +35,9 @@
    =============================== */
 
 /* Card container defines size, rounding, and shadow */
-.author__avatar{
+.author__profile .author__avatar {
   width: 300px;                /* adjust 260–320px to taste */
-  aspect-ratio: 3 / 4;         /* portrait shape like the reference site */
+  aspect-ratio: 3 / 4;         /* portrait shape */
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,.16);
@@ -47,32 +47,35 @@
   padding: 0;
 }
 
-/* Image fills the card without stretching */
-.author__avatar img{
-  width: 100%;
-  height: 100%;
+/* Image fills the card without stretching (override theme caps) */
+.author__profile .author__avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
   display: block;
-  object-fit: cover;           /* crop gracefully */
+  object-fit: cover;            /* crop gracefully to the card */
+  object-position: center top;  /* tweak if you want more headroom */
   border-radius: 0;
   box-shadow: none;
 }
 
 /* Keep sidebar reasonable so main text retains width */
-.sidebar{ width: 320px; }
+.sidebar { width: 320px; }
 
 /* Responsive: smaller portrait on phones */
 @media (max-width: 768px){
-  .author__avatar{ width: 200px; }
-  .sidebar{ width: auto; }
+  .author__profile .author__avatar { width: 200px; }
+  .sidebar { width: auto; }
 }
 
 /* ===============================
    Stack “About” and “Updates” vertically
    =============================== */
 
-.home-grid{ display: block !important; }
-.home-main{ margin: 0; }
-.home-aside{ max-width: none; }
+.home-grid { display: block !important; }
+.home-main { margin: 0; }
+.home-aside { max-width: none; }
 
 /* ===============================
    Paragraph/list justification
@@ -84,7 +87,7 @@
 .page__content li,
 .entry-content li,
 .page__content figcaption,
-.entry-content figcaption{
+.entry-content figcaption {
   text-align: justify !important;
   text-justify: inter-word;
   line-height: 1.75;
@@ -97,7 +100,7 @@
 .page__content h3,
 .page__content h4,
 .page__content h5,
-.page__content h6{
+.page__content h6 {
   text-align: left !important;
 }
 
@@ -105,28 +108,32 @@
    Remove blank gap under masthead
    =============================== */
 
-/* Minimal Mistakes adds space before the first content block on single layout.
-   Flatten it so “About Me” starts near the top. */
-.layout--single .page__content{
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
+/* Nuke top spacing on all relevant wrappers */
+.masthead + .initial-content { margin-top: 0 !important; padding-top: 0 !important; }
+.initial-content { margin-top: 0 !important; padding-top: 0 !important; }
+.page__inner     { margin-top: 0 !important; padding-top: 0 !important; }
+.page,
+.page__content   { margin-top: 0 !important; padding-top: 0 !important; }
 
 /* Kill any top margin on the first heading */
 .layout--single .page__content > h1:first-child,
 .layout--single .page__content > .archive > h1:first-child,
-#about h1{
+#about h1 {
   margin-top: 0 !important;
 }
 
 /* Also tighten the author profile wrapper spacing */
-.author__profile{
+.author__profile {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Hide brand text on the far left and make links start at the left edge */
+/* ===============================
+   (Optional) Hide brand text & left-align links
+   Uncomment if you want to hide the brand label on the far left.
+   =============================== */
+/*
 .masthead .site-title { display: none !important; }
 .masthead__inner .greedy-nav { justify-content: flex-start !important; }
 .masthead__inner .greedy-nav .visible-links { margin-left: 0 !important; }
-
+*/
