@@ -3,6 +3,8 @@
 # Locale-scoped menu (used when site.locale is set)
 en:
   main:
+    - title: "Home"
+      url: /
     - title: "Research"
       url: /research/
     - title: "Publications"
@@ -12,8 +14,9 @@ en:
     - title: "Teaching"
       url: /teaching/
 
-# Fallback menu (used when no locale is set)
 main:
+  - title: "Home"
+    url: /
   - title: "Research"
     url: /research/
   - title: "Publications"
@@ -22,3 +25,4 @@ main:
     url: /projects/
   - title: "Teaching"
     url: /teaching/
+
