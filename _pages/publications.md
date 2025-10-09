@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-# 🎓 Publications during PhD at University of Southern California
+# 🎓 Ph.D. Research Publications (University of Southern California)
 
 - **Nandi, S.**, Natarajan, P., & Abd-Almageed, W. (2023). **TrainFors: A Large Benchmark Training Dataset for Image Manipulation Detection and Localization.** *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*, 403–414. [PDF](https://openaccess.thecvf.com/content/ICCV2023W/DFAD/papers/Nandi_TrainFors_A_Large_Benchmark_Training_Dataset_for_Image_Manipulation_Detection_ICCVW_2023_paper.pdf)/[Code](https://github.com/vimal-isi-edu/TrainFors)
 
@@ -17,7 +17,7 @@ author_profile: true
 
 ---
 
-# 🎓 Publications during MS at University of Kansas
+# 🎓 MS Research Publications (University of Kansas)
 
 - **Nandi, S.** (2017).  *Robust Object Tracking and Adaptive Detection for Auto Navigation of Unmanned Aerial Vehicle.*  Master’s Thesis, University of Kansas.  [Thesis PDF](https://kuscholarworks.ku.edu/entities/publication/f6aa75d9-cbcc-47a4-b6ef-545c704740e5)
 
