@@ -8,23 +8,25 @@ The website is built using **Jekyll** and the **Minimal Mistakes** theme, and au
 
 ## 🧑‍🎓 About Me
 
-I am a **recent Ph.D. graduate in Computer Science** from the **University of Southern California (USC)**, specializing in **Artificial Intelligence**, **Computer Vision**, and **Deep Learning**. I was advised by [**Dr. Prem Natarajan**](https://scholar.google.com/citations?user=X-NM0rJIU_AC&hl=en) at the [**USC Information Sciences Institute**](https://www.isi.edu/), where my doctoral research focused on developing **state-space** and **information-theoretic deep learning models** for AI-generated image forgery detection, generative model fingerprinting, and vision-language understanding.  
-My **Ph.D. thesis**, titled *“Context-Aware Semantic Forgery Detection in Biomedical and Natural Images,”* explored the integration of semantic and non-semantic cues for robust manipulation detection.
+<p align="justify">
+I am a <strong>recent Ph.D. graduate in Computer Science</strong> from the <strong>University of Southern California (USC)</strong>, specializing in <strong>Artificial Intelligence</strong>, <strong>Computer Vision</strong>, and <strong>Deep Learning</strong>. I was advised by <a href="https://scholar.google.com/citations?user=X-NM0rJIU_AC&hl=en" target="_blank" rel="noopener"><strong>Dr. Prem Natarajan</strong></a> at the <a href="https://www.isi.edu/" target="_blank" rel="noopener"><strong>USC Information Sciences Institute</strong></a>, where my doctoral research focused on developing <strong>state-space</strong> and <strong>information-theoretic deep learning models</strong> for AI-generated image forgery detection, generative model fingerprinting, and vision-language understanding. My <strong>Ph.D. thesis</strong>, titled <em>“Context-Aware Semantic Forgery Detection in Biomedical and Natural Images”</em>, explored the integration of semantic and non-semantic cues for robust manipulation detection.
+</p>
 
-I bring **hands-on experience across the full AI stack** — from **model design and optimization** (*SSMs, VLMs, Diffusion Models, GANs, CNNs, Transformers*) to **data curation**, **multimodal learning**, and **large-scale deployment**. My projects bridge **vision**, **language**, and **generative modeling**, with applications in **biomedical imaging**, **digital content integrity**, and **trustworthy AI systems**.
+<p align="justify">
+I bring <strong>hands-on experience across the full AI stack</strong> — from <strong>model design and optimization</strong> (<em>SSMs, VLMs, Diffusion Models, GANs, CNNs, Transformers</em>) to <strong>data curation</strong>, <strong>multimodal learning</strong>, and <strong>large-scale deployment</strong>. My projects bridge <strong>vision</strong>, <strong>language</strong>, and <strong>generative modeling</strong>, with applications in <strong>biomedical imaging</strong>, <strong>digital content integrity</strong>, and <strong>trustworthy AI systems</strong>.
+</p>
 
-Over the years, I have gained extensive experience in **AI-driven image analysis**, **generative model forensics**, and **visual-language alignment**, spanning forgery detection, diffusion modeling, self-supervised learning, and anomaly detection.  
-My research further encompasses **image manipulation detection and localization** — including *splicing, copy-move, inpainting,* and *enhancement forgeries* — as well as **deepfake detection** and **fingerprinting of generative synthetic images** from *GANs, VAEs, Flows,* and *Diffusion Models.*  
-I am also interested in **scientific integrity of research documents**, **document visual question answering**, and **zero-shot semantic segmentation**, along with **image description**, **captioning**, **scene-graph generation**, **image repurpose detection**, and **visual question answering**.  
-These directions collectively aim to advance **explainable, robust, and generalizable visual intelligence systems** that reason jointly over semantic and non-semantic cues.
+<p align="justify">
+Over the years, I have gained extensive experience in <strong>AI-driven image analysis</strong>, <strong>generative model forensics</strong>, and <strong>visual-language alignment</strong>, spanning forgery detection, diffusion modeling, self-supervised learning, and anomaly detection. My research further encompasses <strong>image manipulation detection and localization</strong> — including splicing, copy-move, inpainting, and enhancement forgeries — as well as <strong>deepfake detection</strong> and <strong>fingerprinting of generative synthetic images</strong> from GANs, VAEs, Flows, and Diffusion Models. I am also interested in <strong>scientific integrity of research documents</strong>, <strong>document visual question answering</strong>, and <strong>zero-shot semantic segmentation</strong>, along with <strong>image description</strong>, <strong>captioning</strong>, <strong>scene-graph generation</strong>, <strong>image repurpose detection</strong>, and <strong>visual question answering</strong>. These directions collectively aim to advance <strong>explainable, robust, and generalizable visual intelligence systems</strong> that reason jointly over semantic and non-semantic cues.
+</p>
 
-Beyond academia, I have **industry experience** at [**ABB Robotics**](https://www.abb.com/global/en/areas/robotics) and [**ON Semiconductor**](https://www.onsemi.com/), applying computer vision, 3D mapping, and reinforcement learning to real-world automation systems.  
-I also worked at the [**Kansas Geological Survey**](https://kgs.ku.edu/) and the [**Center for Remote Sensing of Ice Sheets**](https://cresis.ku.edu/), developing signal and image processing pipelines for radar and seismic data.  
-During my **Master’s in Electrical Engineering** at the **University of Kansas**, I completed my thesis under [**Dr. Richard Wang**](https://scholar.google.com/citations?user=I_5aoAwAAAAJ&hl=en), titled  
-*“[Robust Object Tracking and Adaptive Detection for Auto Navigation of Unmanned Aerial Vehicles](https://kuscholarworks.ku.edu/entities/publication/f6aa75d9-cbcc-47a4-b6ef-545c704740e5)”* — exploring object tracking, motion estimation, and adaptive detection using classical computer vision and signal processing techniques.  
-This work formed the foundation for my later research in deep learning and generative AI.
+<p align="justify">
+Beyond academia, I have <strong>industry experience</strong> at <a href="https://www.abb.com/global/en/areas/robotics" target="_blank" rel="noopener"><strong>ABB Robotics</strong></a> and <a href="https://www.onsemi.com/" target="_blank" rel="noopener"><strong>ON Semiconductor</strong></a>, applying computer vision, 3D mapping, and reinforcement learning to real-world automation systems. I also worked at the <a href="https://kgs.ku.edu/" target="_blank" rel="noopener"><strong>Kansas Geological Survey</strong></a> and the <a href="https://cresis.ku.edu/" target="_blank" rel="noopener"><strong>Center for Remote Sensing of Ice Sheets</strong></a>, developing signal and image processing pipelines for radar and seismic data. During my <strong>Master’s in Electrical Engineering</strong> at the <strong>University of Kansas</strong>, I completed my thesis under <a href="https://scholar.google.com/citations?user=I_5aoAwAAAAJ&hl=en" target="_blank" rel="noopener"><strong>Dr. Richard Wang</strong></a> titled <a href="https://kuscholarworks.ku.edu/entities/publication/f6aa75d9-cbcc-47a4-b6ef-545c704740e5" target="_blank" rel="noopener"><em>“Robust Object Tracking and Adaptive Detection for Auto Navigation of Unmanned Aerial Vehicles”</em></a>, which explored object tracking, motion estimation, and adaptive detection using classical computer vision and signal processing techniques — forming the foundation for my later research in deep learning and generative AI.
+</p>
 
-With a strong foundation in **AI model development**, **generative systems**, and **applied computer vision**, I am passionate about building **scalable** and **interpretable AI solutions** that drive innovation in **visual intelligence** and **generative trustworthiness**.
+<p align="justify">
+With a strong foundation in <strong>AI model development</strong>, <strong>generative systems</strong>, and <strong>applied computer vision</strong>, I am passionate about building <strong>scalable</strong> and <strong>interpretable AI solutions</strong> that drive innovation in <strong>visual intelligence</strong> and <strong>generative trustworthiness</strong>.
+</p>
 
 ---
 
@@ -44,14 +46,14 @@ With a strong foundation in **AI model development**, **generative systems**, an
 
 ## ⚙️ Technical Details
 
-- Framework: **Jekyll + Minimal Mistakes**
-- Deployment: **GitHub Pages**
-- Source: [`_pages`, `_data`, `_includes`, `_layouts` directories](https://github.com/SoumyaroopNandi/soumyaroopnandi.github.io/tree/main)
+- Framework: **Jekyll + Minimal Mistakes**  
+- Deployment: **GitHub Pages**  
+- Source: [`_pages`, `_data`, `_includes`, `_layouts`](https://github.com/SoumyaroopNandi/soumyaroopnandi.github.io/tree/main)  
 - License: **MIT**
 
 ---
 
-📬 **Contact:**  
+📬 **Contact**  
 **Email:** [soumyarn@usc.edu](mailto:soumyarn@usc.edu)  
 **Website:** [soumyaroopnandi.github.io](https://soumyaroopnandi.github.io)  
 **LinkedIn:** [linkedin.com/in/soumyaroop-nandi-6a412967](https://www.linkedin.com/in/soumyaroop-nandi-6a412967/)  
