@@ -7,13 +7,27 @@ author_profile: true
 classes: "wide no-title"
 ---
 
-<!-- tiny, reliable gap-killer -->
-<div style="height:0;border-top:1px solid transparent;"></div>
+<style>
+  /* kill the empty page header and any top meta rows */
+  .page__header, .page__title, .page__meta, .breadcrumbs { display: none !important; }
 
-<section id="about" style="margin-top:0;padding-top:.01px;">
-  <h1 style="margin-top:0">About Me</h1>
+  /* remove ALL top spacing the layout adds */
+  .initial-content,
+  .page__inner-wrap,
+  .page__content,
+  .page { margin-top: 0 !important; padding-top: 0 !important; border-top: 1px solid transparent !important; }
 
+  /* prevent first-child margin collapse from the H1 */
+  .page__content > :first-child { margin-top: 0 !important; }
 
+  /* make sure the About section can’t push down */
+  #about { margin-top: 0 !important; padding-top: .01px !important; }
+  #about > h1 { margin-top: 0 !important; }
+</style>
+
+<section id="about">
+  <h1>About Me</h1>
+  
   <p>
     I am a recent <strong>Ph.D. graduate in Computer Science</strong> from the <strong>University of Southern California (USC)</strong>, specializing in
     <strong>Artificial Intelligence, Computer Vision, and Deep Learning</strong>. My doctoral research at the
