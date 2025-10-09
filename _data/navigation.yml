@@ -1,6 +1,5 @@
 # _data/navigation.yml
 
-# Locale-scoped menu (used when site.locale is set)
 en:
   main:
     - title: "Home"
@@ -13,16 +12,3 @@ en:
       url: /projects/
     - title: "Teaching"
       url: /teaching/
-
-main:
-  - title: "Home"
-    url: /
-  - title: "Research"
-    url: /research/
-  - title: "Publications"
-    url: /publications/
-  - title: "Projects"
-    url: /projects/
-  - title: "Teaching"
-    url: /teaching/
-
