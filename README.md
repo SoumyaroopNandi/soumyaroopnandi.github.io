@@ -1,7 +1,6 @@
 # 🧑‍💻 Soumyaroop Nandi — Personal Academic Website
 
-This repository hosts the source code for my academic homepage:  
-👉 **[soumyaroopnandi.github.io](https://soumyaroopnandi.github.io)**  
+This repository hosts the source code for my academic homepage: 👉 **[soumyaroopnandi.github.io](https://soumyaroopnandi.github.io)**  
 
 The website is built using **Jekyll** and the **Minimal Mistakes** theme, and automatically deployed via **GitHub Pages**.
 
