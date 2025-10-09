@@ -1,0 +1,12 @@
+{% assign items = site.data.updates | default: empty %}
+{% if include.limit %}{% assign items = items | slice: 0, include.limit %}{% endif %}
+
+{% if items and items.size > 0 %}
+<ul class="updates">
+  {% for u in items %}
+    <li>{{ u }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No updates yet.</p>
+{% endif %}
