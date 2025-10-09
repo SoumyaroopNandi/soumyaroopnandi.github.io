@@ -1,160 +1,47 @@
-// ---
-// # Only the main Sass file needs front matter for Jekyll to build it
-// ---
-
-// @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-// @import "minimal-mistakes";
-
-
-
-
 ---
 # Only the main Sass file needs front matter for Jekyll to build it
 ---
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+/* Fonts (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap');
 
 /* Minimal Mistakes base */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* =========================
-   Base type & colors
-   ========================= */
-body{
-  background:#fff;
-  color:#000;
-  font:15px/1.5 'Lato', Verdana, Helvetica, sans-serif;
-  margin:0; padding:0;
-}
-p{ text-align:justify; }
-a{ color:#043361; text-decoration:none; }
-a:hover{ color:#069; }
+/* ============ Minimal overrides ============ */
 
-h1,h2,h3,h4,h5{ color:#043361; font-weight:500; }
-h1{ font-size:28px; line-height:1.1; margin:0 0 20px; }
-h2{ font-size:157%; line-height:1.1; margin:2px 0 15px; }
-h3,h4,h5,h6{ font-weight:600; margin:0 0 20px; }
-
-@media (prefers-color-scheme: dark){
-  body{ background:#20212b; color:#dadbdf; }
-  h1,h2,h3,h4,h5,h6,a{ color:rgb(62,183,240); }
+/* Smaller overall type */
+html { font-size: 15px; }                 /* base */
+body {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #fff;
+  margin: 0;
 }
 
-strong{ color:#222; font-weight:500; }
-@media (prefers-color-scheme: dark){ strong{ color:#eeeff0; } }
+/* Headings: toned down */
+h1 { font-size: 1.6rem; font-weight: 600; color: #043361; margin: 0 0 .75rem; }
+h2 { font-size: 1.25rem; font-weight: 600; color: #043361; margin: .5rem 0 .5rem; }
+h3 { font-size: 1.1rem;  font-weight: 600; color: #043361; }
 
-/* =========================
-   Sidebar author card
-   ========================= */
-.author__profile{ margin:0; padding:0 .5rem; text-align:center; }
+/* Body text alignment + links */
+.page__content p { text-align: justify; }
+a { color: #043361; text-decoration: none; }
+a:hover { color: #0066cc; }
 
-/* Rectangular larger avatar */
+/* Rectangular, slightly smaller author image */
 .author__profile .author__avatar{
-  position:relative;
-  width:300px !important;
-  height:420px !important;
-  border-radius:10px !important;
-  overflow:hidden !important;
-  margin:0 auto 1.5rem !important;
-  background:#f7f7f7;
-  border:1px solid rgba(0,0,0,.1);
-  box-shadow:0 8px 24px rgba(0,0,0,.15);
-  max-width:none !important;
+  width: 260px !important;
+  height: 340px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  margin: 0 auto 1rem !important;
 }
 .author__profile .author__avatar img{
-  position:absolute !important; inset:0 !important;
-  width:100% !important; height:100% !important;
-  object-fit:cover !important; object-position:center !important;
-  border-radius:0 !important; box-shadow:none !important;
-  max-width:none !important; padding:0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
 }
-
-/* =========================
-   Publications block
-   ========================= */
-.publications{
-  min-height:100px;
-  .title{
-    color:#043361; font-size:110%;
-    @media (prefers-color-scheme: dark){ color:rgb(62,183,240); }
-  }
-  .venue_year{ font-style:italic; }
-  ul{ padding:0; margin:0; }
-  li{ list-style:none; display:inline; padding:0 10px 0 0; }
-  div{ padding:0; }
-  p{ text-align:justify; font-size:13px; padding:0; margin:0; }
-  .authors .highlight{ text-decoration:underline; display:inline; }
-}
-
-/* =========================
-   Social icons
-   ========================= */
-.social-icons a{
-  display:inline-block; height:2.4rem; width:2rem;
-  background:transparent; color:#043361 !important;
-  border-radius:100%; text-align:center;
-  font-size:1.15rem; line-height:2.5rem; margin-right:1rem;
-  transition:transform .2s ease;
-}
-.social-icons a:last-child{ margin-right:0; }
-.social-icons a:hover{ background:#fff; color:#000; transform:scale(1.2); }
-@media (prefers-color-scheme: dark){
-  .social-icons a{ color:#3eb7f0 !important; }
-  .social-icons a:hover{ background:#20212b; color:#000; transform:scale(1.2); }
-}
-
-/* Monospace email style */
-email{ font-size:14px; font-family:"Ubuntu Mono"; }
-
-/* =========================
-   Tables, quotes, code
-   ========================= */
-table{ width:100%; border-collapse:collapse; }
-th,td{ text-align:left; padding:5px 10px; border-bottom:1px solid #e5e5e5; }
-th{ color:#444; } dt{ color:#444; font-weight:500; }
-@media (prefers-color-scheme: dark){
-  th,dt{ color:rgb(62,183,240); }
-}
-blockquote{ border-left:1px solid #e5e5e5; margin:0; padding:0 0 0 20px; font-style:italic; }
-code,pre{
-  font-family:Monaco, Consolas, "Ubuntu Mono", "Courier New", monospace;
-  color:#333;
-}
-pre{
-  max-width:500px; padding:8px 15px; background:#f8f8f8;
-  border-radius:5px; border:1px solid #e5e5e5; overflow-x:auto;
-}
-
-/* =========================
-   Sidebar scroll behavior
-   ========================= */
-.sidebar{
-  width:320px;
-  position:sticky; top:64px;
-  height:calc(100vh - 64px);
-  align-self:flex-start;
-  overflow-y:auto; overflow-x:hidden;
-  padding-right:6px;
-  scrollbar-width:thin;
-  scrollbar-color:rgba(0,0,0,.25) transparent;
-}
-.sidebar::-webkit-scrollbar{ width:8px; }
-.sidebar::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.25); border-radius:4px; }
-
-@media (max-width:768px){
-  .sidebar{ position:static; width:auto; height:auto; overflow:visible; padding-right:0; }
-}
-
-/* =========================
-   Small helpers
-   ========================= */
-img{ max-width:100%; }
-hr{ border:0; background:#e5e5e5; height:1px; margin:0 0 20px; }
-small{ font-size:11px; }
-.biblink{ text-decoration:none; display:inline; margin-right:0; }
-.fakelink{ text-decoration:none; cursor:pointer; }
-.bibref{ font-size:70%; margin-top:10px; margin-left:0; display:none; font-family:monospace; }
-
