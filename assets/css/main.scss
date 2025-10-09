@@ -139,7 +139,7 @@
 }
 
 /* ===============================
-   Remove blank gap under masthead
+   Remove blank gap under masthead (general)
    =============================== */
 
 .masthead + .initial-content,
@@ -154,15 +154,23 @@
 /* Remove top margin from the very first element */
 .page__content > :first-child { margin-top: 0 !important; }
 
-/* Optional: if you use an #about anchor, keep it snug */
-#about h1 { margin-top: 0 !important; }
+/* Keep About anchor snug if used */
+#about,
+#about h1 { margin-top: 0 !important; padding-top: 0 !important; }
 
 /* ===============================
-   (Optional) Hide brand label & left-align links
-   Uncomment if you want no brand text at far left.
+   Final gap fix for all layouts
+   (covers layout--home, --single, --default)
    =============================== */
-/*
-.masthead .site-title { display: none !important; }
-.masthead__inner .greedy-nav { justify-content: flex-start !important; }
-.masthead__inner .greedy-nav .visible-links { margin-left: 0 !important; }
-*/
+
+.layout--home .page__inner,
+.layout--single .page__inner,
+.layout--default .page__inner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* If there’s still a tiny leftover gap, nudge it closed */
+.page__content > :first-child {
+  margin-top: -8px !important;
+}
