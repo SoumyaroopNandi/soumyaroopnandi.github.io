@@ -1,14 +1,41 @@
 ---
-# Only front matter so Jekyll processes it
+# Only the dashes+front matter are required so Jekyll processes this file
 ---
 
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+/* ==== Home grid (main + right rail) ==== */
+.home-like .page__content { padding-top: 0; }
+
+.home-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;     /* mobile: one column */
+}
+
+/* desktop ≥ 992px: two columns (main + aside) */
+@media (min-width: 992px) {
+  .home-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  .home-aside { position: sticky; top: 2rem; }
+}
+
+/* recent updates styling */
+.home-aside h2 { margin-top: 0; }
+.home-aside ul { margin: 0; padding-left: 1.2rem; }
+.home-aside li { margin: 0 0 .4rem 0; }
+
+/* ==== Bigger author photo on the left card ==== */
 .author__avatar img {
-  width: 180px !important;  /* increase size */
-  height: auto !important;
-  border-radius: 50%;       /* keep circular shape */
-  margin: 0 auto;
-  display: block;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 220px;           /* tweak 200–240 as you like */
+  max-width: 100%;
+  border-radius: 6px;     /* subtle round corners */
+}
+
+/* optional: make content column a bit wider on large screens */
+@media (min-width: 1200px) {
+  .page__inner { max-width: 1200px; } /* default is ~1100px */
 }
