@@ -1,3 +1,11 @@
+---
+# Only the main Sass file needs front matter for Jekyll to build it
+---
+
+/* Load Minimal Mistakes skin + base */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
 /* ===============================
    Keep masthead full-width on top
    =============================== */
@@ -51,13 +59,13 @@
    =============================== */
 
 .author__avatar img {
-  width: 210px;           /* increased from default ~100px */
+  width: 210px;
   height: 210px;
-  border-radius: 8px;     /* slightly rounded corners */
-  object-fit: cover;      /* ensures the image doesn't distort */
+  border-radius: 8px;
+  object-fit: cover;
   display: block;
-  margin: 0 auto 1rem auto; /* center align and spacing below */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* soft shadow for depth */
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Keep sidebar balanced with larger avatar */
@@ -66,30 +74,53 @@
 }
 
 /* ===============================
-   Justify About Me text (Home page)
+   Force justified text on Home/About
+   (increase specificity + !important)
    =============================== */
 
-.home-main p,
+/* Typical page/article body */
+.home .page__content p,
+.page-home .page__content p,
 .page__content p {
-  text-align: justify;
+  text-align: justify !important;
   text-justify: inter-word;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 1rem;
 }
 
-/* Optional: justify list items and captions for consistency */
+/* Common extra containers used by Minimal Mistakes */
+.home .entry-content p,
+.entry-content p,
 .page__content li,
-.page__content figcaption {
-  text-align: justify;
+.entry-content li,
+.page__content figcaption,
+.entry-content figcaption {
+  text-align: justify !important;
   text-justify: inter-word;
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+/* If you used a custom wrapper like .home-main from your markup */
+.home-main p {
+  text-align: justify !important;
+  text-justify: inter-word;
+  line-height: 1.7;
+}
+
+/* Optional: avoid justifying headings */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  text-align: left !important;
 }
 
 /* ===============================
    Responsive tweaks
    =============================== */
 
-/* On smaller screens, slightly reduce avatar size */
 @media (max-width: 768px) {
   .author__avatar img {
     width: 160px;
