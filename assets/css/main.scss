@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter for Jekyll to build it
 ---
 
-/* Import Minimal Mistakes */
+/* Import Minimal Mistakes base */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
@@ -10,7 +10,7 @@
    Global Typography & Layout Adjustments
    ====================================== */
 
-html { font-size: 15px; }  /* smaller font size */
+html { font-size: 15px; }
 
 body {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
@@ -20,10 +20,19 @@ body {
   margin: 0;
 }
 
-/* Justified text */
+/* ✅ Force all readable text blocks to justify */
 .page__content p,
-.page__content li {
-  text-align: justify;
+.page__inner-wrap p,
+.archive__item p,
+article p,
+section p {
+  text-align: justify !important;
+}
+
+.page__content li,
+.page__inner-wrap li,
+.archive__item li {
+  text-align: justify !important;
 }
 
 /* Headings */
@@ -43,7 +52,7 @@ a:hover {
   color: #0066cc;
 }
 
-/* Author image: rectangular and centered */
+/* Author image (rectangular) */
 .author__profile .author__avatar {
   width: 260px !important;
   height: 340px !important;
@@ -58,7 +67,7 @@ a:hover {
   border-radius: 0 !important;
 }
 
-/* Dark mode adjustments */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   body { background: #20212b; color: #dadbdf; }
   h1, h2, h3, h4, h5, h6, a { color: rgb(62, 183, 240); }
