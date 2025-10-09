@@ -6,7 +6,7 @@
   <div class="updates">
     {% for u in items %}
       <div class="update-item">
-        <span class="arrow">›</span>
+        <span class="arrow">👉</span>
         <span class="update-text">{{ u | markdownify }}</span>
       </div>
     {% endfor %}
@@ -19,7 +19,7 @@
 <style>
   /* Scrollable Highlights Section */
   .updates-container {
-    max-height: 220px;                 /* adjust to taste */
+    max-height: 220px;                 
     overflow-y: auto;
     padding: .6rem .6rem .6rem .4rem;
     margin-top: .5rem;
@@ -37,29 +37,27 @@
   /* Each update line */
   .update-item {
     display: flex;
-    align-items: center;               /* ✅ centers arrow with text */
+    align-items: center;
     gap: .55rem;
     margin: .35rem 0;
     line-height: 1.4;
   }
 
-  /* Arrow styling */
+  /* Animated yellow hand */
   .arrow {
-    display: inline-flex;              /* ✅ perfect vertical centering */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.05rem;                    /* fixed width keeps all text aligned */
-    height: 1.05rem;                   /* matches text line height */
-    font-size: 1.05rem;
-    line-height: 1;
-    color: #d32f2f;                    /* ✅ red arrow */
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
-    animation: nudge 1.8s ease-in-out infinite;
+    animation: wave 1.8s ease-in-out infinite;
   }
 
-  @keyframes nudge {
-    0%, 100% { opacity:.55; transform: translateX(0); }
-    50%      { opacity:1;   transform: translateX(3px); }
+  @keyframes wave {
+    0%, 100% { transform: rotate(0deg) translateX(0); opacity: .7; }
+    50%      { transform: rotate(10deg) translateX(3px); opacity: 1; }
   }
 
   .update-text a {
