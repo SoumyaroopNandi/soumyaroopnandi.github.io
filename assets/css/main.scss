@@ -59,8 +59,8 @@
    =============================== */
 
 .author__avatar img {
-  width: 260px;           /* increased from 210px */
-  height: 260px;
+  width: 460px;           /* increased from 210px */
+  height: 460px;
   border-radius: 10px;    /* keeps rectangular with slight rounding */
   object-fit: cover;
   display: block;
@@ -70,7 +70,7 @@
 
 /* Keep sidebar balanced with larger avatar */
 .sidebar {
-  width: 300px;           /* widen sidebar to fit larger image */
+  width: 500px;           /* widen sidebar to fit larger image */
 }
 
 
