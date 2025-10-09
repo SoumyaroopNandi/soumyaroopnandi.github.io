@@ -8,12 +8,19 @@ show_excerpts: false
 entries_layout: none
 ---
 
+<!-- Hide the Home layout's automatic posts list so we can use our own -->
+<style>
+  .archive__subtitle,
+  .entries,
+  .pagination { display: none !important; }
+</style>
 
 <section id="about">
   <h1>About Me</h1>
-  
+
   <p>
-    I am a recent <strong>Ph.D. graduate in Computer Science</strong> from the <strong>University of Southern California (USC)</strong>, specializing in
+    I am a recent <strong>Ph.D. graduate in Computer Science</strong> from the
+    <strong>University of Southern California (USC)</strong>, specializing in
     <strong>Artificial Intelligence, Computer Vision, and Deep Learning</strong>. My doctoral research at the
     <strong>USC Information Sciences Institute</strong> focused on developing <strong>state-space</strong> and
     <strong>information-theoretic deep learning models</strong> for <em>AI-generated image forgery detection</em>,
@@ -35,8 +42,8 @@ entries_layout: none
   </p>
 
   <p>
-    Beyond academia, I have industry experience at <strong>ABB Robotics</strong> and <strong>ON Semiconductor</strong>, applying computer
-    vision, 3D mapping, and reinforcement learning to real-world automation systems. I also worked at the
+    Beyond academia, I have industry experience at <strong>ABB Robotics</strong> and <strong>ON Semiconductor</strong>,
+    applying computer vision, 3D mapping, and reinforcement learning to real-world automation systems. I also worked at the
     <strong>Kansas Geological Survey</strong> and the <strong>Center for Remote Sensing of Ice Sheets</strong>, developing signal and image
     processing pipelines for radar and seismic data. During my <strong>Master’s in Electrical Engineering at the University of Kansas</strong>,
     my thesis — <em>“Robust Object Tracking and Adaptive Detection for Auto Navigation of Unmanned Aerial Vehicles”</em> —
@@ -53,7 +60,8 @@ entries_layout: none
 
 <hr />
 
-<section id="updates">
-  <h2>Recent Updates</h2>
+<!-- Single unified “Recent Posts” section driven by _data/updates.yml -->
+<section id="recent-posts">
+  <h2>Recent Posts</h2>
   {% include updates.html limit=8 %}
 </section>
