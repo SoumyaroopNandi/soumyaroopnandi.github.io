@@ -3,11 +3,14 @@
 
 {% if items and items.size > 0 %}
 <div class="updates-container">
-  <ul class="updates">
+  <div class="updates">
     {% for u in items %}
-      <li>{{ u | markdownify }}</li>
+      <div class="update-item">
+        <span class="arrow">›</span>
+        <span class="update-text">{{ u | markdownify }}</span>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
 {% else %}
 <p>No updates yet.</p>
@@ -16,7 +19,7 @@
 <style>
   /* Scrollable Highlights Section */
   .updates-container {
-    max-height: 220px;          /* adjust height as needed */
+    max-height: 220px;          /* Adjust scroll height */
     overflow-y: auto;
     padding-right: 0.5rem;
     margin-top: 0.5rem;
@@ -25,16 +28,43 @@
     background: #fafafa;
   }
 
-  .updates-container::-webkit-scrollbar {
-    width: 6px;
-  }
+  /* Scrollbar styling */
+  .updates-container::-webkit-scrollbar { width: 6px; }
   .updates-container::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.25);
     border-radius: 4px;
   }
 
-  .updates li {
-    margin-bottom: 0.5rem;
+  /* Individual update items */
+  .update-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  /* Animated arrow */
+  .arrow {
+    color: #043361;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    animation: pulse 1.8s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(3px); }
+  }
+
+  .update-text a {
+    color: #043361;
+    text-decoration: none;
+  }
+  .update-text a:hover {
+    color: #0066cc;
+    text-decoration: underline;
   }
 </style>
