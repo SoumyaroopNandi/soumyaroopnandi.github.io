@@ -2,29 +2,101 @@
 # Only the main Sass file needs front matter for Jekyll to build it
 ---
 
-/* Minimal Mistakes base */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* ===== Masthead: no extra space below ===== */
-.masthead { margin-bottom: 0 !important; }
-.masthead,
-.masthead__inner { max-width: none !important; }
+/* =========================================================
+   Rectangular Author Image Override
+   ========================================================= */
 
-/* ===== Sidebar: sticky + scrollable column ===== */
+.author__profile {
+  margin: 0;
+  padding: 0 .5rem;
+  text-align: center;
+}
+
+.author__profile .author__avatar {
+  position: relative;
+  width: 300px !important;     /* wider rectangle */
+  height: 420px !important;    /* taller aspect */
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  margin: 0 auto 1.5rem !important;
+  background: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+  max-width: none !important;
+}
+
+.author__profile .author__avatar img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;       /* ✅ removes circle */
+  box-shadow: none !important;
+  max-width: none !important;
+}
+
+/* =========================================================
+   Typography + Layout refinements (optional)
+   ========================================================= */
+
+body {
+  background-color: #fff;
+  color: #000;
+  font: 15px/1.6 'Crimson Pro', 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #043361;
+  font-weight: 500;
+}
+
+a {
+  color: #043361;
+  text-decoration: none;
+}
+a:hover {
+  color: #0066cc;
+}
+
+/* =========================================================
+   Remove gap under masthead
+   ========================================================= */
+.masthead { margin-bottom: 0 !important; }
+.initial-content, .page__content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 1px solid transparent !important;
+}
+.page__content > :first-child { margin-top: 0 !important; }
+#about { margin-top: 0 !important; padding-top: .01px; }
+
+/* =========================================================
+   Sidebar scroll behavior
+   ========================================================= */
 .sidebar {
   width: 320px;
-  position: sticky; top: 64px;   /* ≈ header height */
+  position: sticky;
+  top: 64px;
   height: calc(100vh - 64px);
   align-self: flex-start;
-  overflow-y: auto; overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 6px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(0,0,0,.25) transparent;
+  scrollbar-color: rgba(0, 0, 0, .25) transparent;
 }
 .sidebar::-webkit-scrollbar { width: 8px; }
 .sidebar::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, .25);
   border-radius: 4px;
 }
 
@@ -37,61 +109,3 @@
     padding-right: 0;
   }
 }
-
-/* ===== Rectangular larger avatar ===== */
-.author__profile {
-  margin: 0;
-  padding: 0 .5rem;
-}
-
-.author__profile .author__avatar {
-  position: relative;
-  width: 300px;          /* wider */
-  height: 400px;         /* rectangular shape */
-  border-radius: 10px;   /* small rounding on corners */
-  overflow: hidden;
-  margin: 0 auto 1rem;
-  background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,.15);
-  padding: 0 !important;
-}
-
-.author__profile .author__avatar img {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* ===== REAL no-gap fix under nav (prevents margin-collapsing) ===== */
-.initial-content {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.page__content {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  border-top: 1px solid transparent !important;  /* breaks margin-collapsing */
-}
-
-.page__title,
-.page__lead {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.page__content > :first-child {
-  margin-top: 0 !important;
-}
-
-#about {
-  margin-top: 0 !important;
-  padding-top: .01px;
-} /* if an anchor precedes the H1 */
