@@ -9,7 +9,11 @@ The website is built using **Jekyll** and the **Minimal Mistakes** theme, and au
 ## 🧑‍🎓 About Me
 
 <p align="justify">
-I am a <strong>recent Ph.D. graduate in Computer Science</strong> from the <strong>University of Southern California (USC)</strong>, specializing in <strong>Artificial Intelligence</strong>, <strong>Computer Vision</strong>, and <strong>Deep Learning</strong>. I was advised by <a href="https://scholar.google.com/citations?user=X-NM0rJIU_AC&hl=en" target="_blank" rel="noopener"><strong>Dr. Prem Natarajan</strong></a> at the <a href="https://www.isi.edu/" target="_blank" rel="noopener"><strong>USC Information Sciences Institute</strong></a>, where my doctoral research focused on developing <strong>state-space</strong> and <strong>information-theoretic deep learning models</strong> for AI-generated image forgery detection, generative model fingerprinting, and vision-language understanding. My <strong>Ph.D. thesis</strong>, titled <em>“Context-Aware Semantic Forgery Detection in Biomedical and Natural Images”</em>, explored the integration of semantic and non-semantic cues for robust manipulation detection.
+I am a <strong>recent Ph.D. graduate in Computer Science</strong> from the <strong>University of Southern California (USC)</strong>, specializing in <strong>Artificial Intelligence</strong>, <strong>Computer Vision</strong>, and <strong>Deep Learning</strong>. I was advised by <a href="https://scholar.google.com/citations?user=X-NM0rJIU_AC&hl=en" target="_blank" rel="noopener"><strong>Dr. Prem Natarajan</strong></a> at the <a href="https://www.isi.edu/" target="_blank" rel="noopener"><strong>USC Information Sciences Institute</strong></a>, where my doctoral research focused on developing <strong>state-space</strong> and <strong>information-theoretic deep learning models</strong> for AI-generated image forgery detection, generative model fingerprinting, and vision-language understanding. My <strong>Ph.D. thesis</strong>, titled 
+<a href="https://www.proquest.com/openview/238670cc641260d59c87daec87717a51/1?pq-origsite=gscholar&cbl=18750&diss=y" 
+   target="_blank" rel="noopener">
+  <em>“Context-Aware Semantic Forgery Detection in Biomedical and Natural Images”</em>
+</a>., explored the integration of semantic and non-semantic cues for robust manipulation detection.
 </p>
 
 <p align="justify">
