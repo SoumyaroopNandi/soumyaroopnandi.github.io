@@ -7,7 +7,7 @@ author_profile: true
 
 # 🎓 Ph.D. Research Publications (USC)
 
-- **Nandi, S.**, & Natarajan, P. (2026). **BioTamperNet: Affinity-Guided State-Space Model Detecting Tampered Biomedical Images.** *Proceedings of the International Conference on Learning Representations (ICLR)*. [PDF](https://arxiv.org/pdf/2601.08040)/[Code](https://github.com/SoumyaroopNandi/BioTamperNet)
+- **Nandi, S.**, & Natarajan, P. (2026). **BioTamperNet: Affinity-Guided State-Space Model Detecting Tampered Biomedical Images.** *Proceedings of the International Conference on Learning Representations (ICLR)*. [PDF](https://arxiv.org/pdf/2602.01435)/[Code](https://github.com/SoumyaroopNandi/BioTamperNet)
 
 - **Nandi, S.**, & Natarajan, P. (2026). **Rescind: Countering Image Misconduct in Biomedical Publications with Vision-Language and State-Space Modeling.** *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)*. [PDF](https://arxiv.org/pdf/2601.08040)/[Code](https://github.com/SoumyaroopNandi/Rescind)
 
